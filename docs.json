@@ -7,15 +7,18 @@
     "light": "#38bdf8",
     "dark": "#0284c7"
   },
+  "favicon": "/favicon.svg",
   "navigation": {
-    "dropdowns": [
+    "tabs": [
       {
-        "dropdown": "文档",
-        "icon": "book",
+        "tab": "教程",
         "groups": [
           {
             "group": "开始使用",
-            "pages": ["index", "quickstart"]
+            "pages": [
+              "index",
+              "quickstart"
+            ]
           },
           {
             "group": "使用教程",
