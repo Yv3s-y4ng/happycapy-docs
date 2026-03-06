@@ -1,0 +1,70 @@
+---
+title: 连接外部服务
+description: 让 AI 帮你操作 GitHub、邮箱、Notion 等工具
+---
+
+# 连接外部服务
+
+HappyCapy 可以连接你常用的工具，让 AI 直接帮你操作。
+
+## 支持的服务
+
+<CardGroup cols={2}>
+  <Card title="GitHub" icon="github">
+    管理代码仓库、创建 PR、查看 Issue。
+  </Card>
+  <Card title="邮箱" icon="envelope">
+    读邮件、发邮件、管理标签和日程。
+  </Card>
+  <Card title="Notion" icon="book">
+    搜索、创建和编辑 Notion 页面。
+  </Card>
+  <Card title="更多服务" icon="ellipsis">
+    通过 MCP 协议可以接入更多工具。
+  </Card>
+</CardGroup>
+
+## GitHub
+
+连接 GitHub 后，你可以说：
+
+```
+帮我看看 my-project 仓库最近的 PR
+创建一个新的 Issue，标题是"修复登录页面 bug"
+把这段代码提交到 main 分支
+```
+
+## 邮箱
+
+连接邮箱后，你可以说：
+
+```
+帮我看看今天收到的邮件
+给 zhangsan@example.com 发一封邮件，内容是会议纪要
+把未读邮件的摘要列出来
+```
+
+## Notion
+
+连接 Notion 后，你可以说：
+
+```
+在 Notion 里搜索关于"产品规划"的页面
+帮我在 Notion 里创建一个新的周报页面
+把这个会议纪要写到 Notion 里
+```
+
+## 如何连接
+
+大部分服务在你首次使用时会自动提示连接。你也可以主动说：
+
+```
+帮我连接 GitHub 账号
+配置邮箱集成
+```
+
+AI 会引导你完成授权流程。
+
+<Warning>
+连接外部服务需要授权访问，请确保你信任连接的服务。你随时可以在设置中撤销授权。
+</Warning>

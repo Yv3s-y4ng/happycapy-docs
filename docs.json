@@ -9,19 +9,24 @@
   "favicon": "/favicon.svg",
   "navigation": [
     {
-      "group": "Getting Started",
+      "group": "开始使用",
       "pages": ["introduction", "quickstart"]
     },
     {
-      "group": "Features",
-      "pages": ["features/skills", "features/agents", "features/mcp"]
+      "group": "使用教程",
+      "pages": [
+        "tutorials/media",
+        "tutorials/documents",
+        "tutorials/design",
+        "tutorials/integrations"
+      ]
     }
   ],
   "navbar": {
     "links": [
       {
-        "label": "GitHub",
-        "url": "https://github.com/Yv3s-y4ng/happycapy-docs"
+        "label": "HappyCapy",
+        "url": "https://happycapy.ai"
       }
     ]
   },
