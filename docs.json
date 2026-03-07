@@ -1,11 +1,17 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "maple",
   "name": "HappyCapy",
   "colors": {
-    "primary": "#0ea5e9",
-    "light": "#38bdf8",
-    "dark": "#0284c7"
+    "primary": "#ff6b4a",
+    "light": "#fcfbf8",
+    "dark": "#2e2929"
+  },
+  "background": {
+    "color": {
+      "light": "#fcfbf8",
+      "dark": "#1a1a1a"
+    }
   },
   "favicon": "/favicon.svg",
   "logo": {
