@@ -1,0 +1,569 @@
+---
+title: "Data Analysis & Visualization"
+description: "How data professionals can leverage HappyCapy for interactive dashboards, exploratory analysis, ML models, and automated monitoring"
+---
+
+## Who This Is For
+
+Data Scientists, Data Analysts, Business Intelligence Specialists, Machine Learning Engineers
+
+## Core Scenarios
+
+### Scenario 1: Build an Interactive Dashboard from Scratch
+
+**Real Case:** The data science team used AI to build a 5,000-line TypeScript visual application without knowing JavaScript.
+
+#### How to do it in HappyCapy
+
+Describe your dashboard requirements in detail:
+
+```
+Help me build an interactive dashboard to analyze user retention data:
+
+Data sources:
+- User registration data (users.csv)
+- User activity log (activity.csv)
+
+Functional requirements:
+- Display 7-day, 30-day, and 90-day retention rate curves
+- Group comparison by user source (advertising, natural traffic,
+  recommendation)
+- Time range filter
+- Bar charts showing weekly active user trends
+
+Technology stack: Use React + Recharts to generate a web page
+that can be run directly.
+```
+
+#### What HappyCapy Will Do
+
+<AccordionGroup>
+  <Accordion icon="file-csv" title="Step 1: Process Your Data">
+    Read and process your data files automatically
+  </Accordion>
+
+  <Accordion icon="code" title="Step 2: Write Complete Application">
+    Write complete React application code with proper structure
+  </Accordion>
+
+  <Accordion icon="box" title="Step 3: Setup Environment">
+    Automatically install dependencies and configure development environment
+  </Accordion>
+
+  <Accordion icon="server" title="Step 4: Start Server">
+    Start the local server and generate a preview link
+  </Accordion>
+
+  <Accordion icon="eye" title="Step 5: Interactive Preview">
+    You can view and interact directly in the browser
+  </Accordion>
+</AccordionGroup>
+
+#### Key Advantages
+
+- No need to know frontend development
+- Code can be reused (modify directly next time you analyze similar data)
+- More durable and easier to share than Jupyter Notebooks
+- Professional-looking dashboards ready for stakeholders
+
+**Time saving: 2-4x time savings**
+
+### Scenario 2: Exploratory Data Analysis (EDA)
+
+#### How to do it in HappyCapy
+
+Request comprehensive analysis of your dataset:
+
+```
+Help me analyze this sales data (sales_2024.csv):
+
+1. Give me an overview of the data (number of rows, columns,
+   missing values)
+2. Generate descriptive statistics (mean, median, standard deviation)
+3. Identify outliers
+4. Do correlation analysis to see which factors affect sales
+5. Draw distribution charts and trend charts of key indicators
+6. Summarize 3-5 key findings
+```
+
+#### What HappyCapy Automatically Does
+
+<CardGroup cols={2}>
+  <Card title="Visualizations" icon="chart-mixed">
+    Generate variety of visualization charts
+  </Card>
+
+  <Card title="Statistics" icon="calculator">
+    Perform statistical analysis
+  </Card>
+
+  <Card title="Pattern Discovery" icon="magnifying-glass-chart">
+    Discover patterns and anomalies in data
+  </Card>
+
+  <Card title="Reports" icon="file-lines">
+    Output structured report
+  </Card>
+</CardGroup>
+
+### Scenario 3: Machine Learning Model Training and Evaluation
+
+#### How to do it in HappyCapy
+
+Request end-to-end ML workflow:
+
+```
+Use this customer churn data (churn_data.csv) to train a
+prediction model:
+
+1. Data preprocessing (handle missing values, standardize
+   numerical features)
+2. Feature engineering (generate useful new features)
+3. Train several models (logistic regression, random forest, XGBoost)
+4. Compare model performance (precision, recall, F1, AUC)
+5. Generate feature importance analysis
+6. Give me the prediction code of the best model that can
+   predict new customers
+```
+
+#### What HappyCapy Helps You Complete
+
+<CardGroup cols={2}>
+  <Card title="Feature Engineering" icon="gears">
+    Automatic feature engineering
+  </Card>
+
+  <Card title="Model Selection" icon="sliders">
+    Model selection and hyperparameter tuning
+  </Card>
+
+  <Card title="Performance Reports" icon="chart-line">
+    Generate performance comparison report
+  </Card>
+
+  <Card title="Model Export" icon="download">
+    Save the trained model
+  </Card>
+
+  <Card title="Production Code" icon="code">
+    Output prediction code ready to use
+  </Card>
+</CardGroup>
+
+### Scenario 4: Anomaly Monitoring Dashboard
+
+**Real Case:** Data infrastructure team monitors 200 dashboards to automatically identify data anomalies.
+
+#### How to do it in HappyCapy
+
+Set up automated monitoring:
+
+```
+Help me set up automatic monitoring:
+
+- Check this BigQuery data table every morning at 9am
+- Send an alert if daily active users are 20% lower than
+  the 7-day average
+- Send an alert if the error rate exceeds 5%
+- Generate daily data summary and send to my email
+```
+
+<Note>
+  Scheduled automations are available for Pro/Max plan users.
+</Note>
+
+## Advice for Data Analysts
+
+### 1. Move from Disposable Notebooks to Persistent Tools
+
+<Columns cols={2}>
+  <div>
+    **Old Approach:**
+    - Write new Python script each time
+    - Jupyter notebooks pile up
+    - Hard to reuse or share
+    - Inconsistent formats
+  </div>
+  <div>
+    **New Approach:**
+    - Build reusable web dashboards
+    - Save workflows for reuse
+    - Professional visualizations
+    - Easy to share with stakeholders
+  </div>
+</Columns>
+
+<Tip>
+  Let HappyCapy build reusable web dashboards instead of one-off scripts.
+</Tip>
+
+### 2. Interrupt Decisively When Necessary
+
+AI sometimes tends toward overly complex solutions:
+
+```
+This approach seems too complex. Try something simpler
+with fewer dependencies.
+```
+
+HappyCapy will adjust immediately and provide a more straightforward solution.
+
+### 3. Cross-Language Accessibility
+
+You only need to understand data analysis concepts, not be proficient in multiple programming languages:
+
+```
+Process this data with Python and visualize with JavaScript
+using D3.js for interactive charts.
+```
+
+HappyCapy handles the multi-language implementation automatically.
+
+### 4. Use It Like a "Slot Machine"
+
+For experimental analysis:
+
+<AccordionGroup>
+  <Accordion icon="save" title="Step 1: Save Current Work">
+    Save your current state (commit code, export data)
+  </Accordion>
+
+  <Accordion icon="clock" title="Step 2: Let AI Work">
+    Let HappyCapy work autonomously for 30 minutes
+  </Accordion>
+
+  <Accordion icon="thumbs-up" title="Step 3: Accept or Retry">
+    If satisfied with result, accept it. If not satisfied, start over.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  This is often more efficient than manually fixing AI errors.
+</Note>
+
+## Real-World Examples
+
+### Example 1: Customer Segmentation Analysis
+
+```
+Perform customer segmentation analysis on this data:
+
+[Upload customer_data.csv]
+
+Data includes:
+- Demographics (age, location, income)
+- Purchase history (frequency, value, recency)
+- Engagement metrics (email opens, website visits)
+
+Tasks:
+1. Perform RFM analysis (Recency, Frequency, Monetary)
+2. Use K-means clustering to identify 4-5 customer segments
+3. Profile each segment (characteristics, behaviors)
+4. Visualize segments with scatter plots and radar charts
+5. Recommend marketing strategies for each segment
+6. Export segment assignments for use in CRM
+```
+
+### Example 2: Time Series Forecasting
+
+```
+Create a sales forecasting model:
+
+Data: monthly_sales.csv (3 years of historical data)
+
+Requirements:
+1. Decompose time series (trend, seasonality, residuals)
+2. Check for stationarity (ADF test)
+3. Train multiple models:
+   - ARIMA
+   - Prophet (Facebook's forecasting tool)
+   - LSTM (if patterns are complex)
+4. Compare model performance (RMSE, MAE, MAPE)
+5. Forecast next 6 months
+6. Create confidence intervals
+7. Visualize historical data + forecasts with interactive chart
+
+Explain which model performed best and why.
+```
+
+### Example 3: A/B Test Analysis
+
+```
+Analyze results from our A/B test:
+
+[Upload ab_test_results.csv]
+
+Test details:
+- Control: Current checkout flow
+- Variant: New one-click checkout
+- Metrics: Conversion rate, average order value, completion time
+- Sample size: 10,000 users per variant
+
+Analysis needed:
+1. Calculate statistical significance (p-value, confidence intervals)
+2. Check for sample ratio mismatch
+3. Analyze by user segments (new vs. returning, device type)
+4. Calculate practical significance (effect size)
+5. Estimate revenue impact if we roll out variant
+6. Visualize results with clear charts
+7. Provide go/no-go recommendation
+
+Be conservative with statistical interpretation.
+```
+
+### Example 4: Cohort Analysis
+
+```
+Build a cohort retention analysis:
+
+Data: user_activity.csv with user_id, signup_date, activity_date
+
+Analysis:
+1. Group users by signup month (cohorts)
+2. Calculate retention for each cohort at:
+   - Day 1, 7, 14, 30, 60, 90
+3. Create cohort retention heatmap
+4. Identify which cohorts have best retention
+5. Analyze if there are seasonal patterns
+6. Compare cohorts before/after a major feature launch (June 2024)
+7. Build interactive dashboard to explore different cohort groupings
+
+Help me understand what's driving retention differences.
+```
+
+### Example 5: SQL Query Optimization
+
+```
+Help me optimize this slow SQL query:
+
+[Paste SQL query]
+
+Database: PostgreSQL
+Table size: 50M rows
+Current execution time: 45 seconds
+
+Please:
+1. Explain what the query is doing
+2. Identify performance bottlenecks
+3. Suggest optimizations (indexes, query rewrite, etc.)
+4. Explain the execution plan
+5. Provide the optimized version
+6. Estimate expected performance improvement
+
+Also suggest what indexes I should create.
+```
+
+## Advanced Data Workflows
+
+### Automated Reporting Pipeline
+
+```
+Create an automated weekly analytics report:
+
+Data sources:
+- PostgreSQL database (user events)
+- Google Analytics (via API)
+- Stripe (via API for revenue data)
+
+Report sections:
+1. Executive Summary
+   - Key metrics vs. previous week
+   - Notable changes (flag >10% changes)
+
+2. User Growth
+   - New signups (daily trend)
+   - Activation rate
+   - Growth rate by channel
+
+3. Engagement
+   - DAU/WAU/MAU trends
+   - Feature usage breakdown
+   - Session duration analysis
+
+4. Revenue
+   - MRR and growth rate
+   - New vs. expansion vs. churn
+   - Customer LTV by cohort
+
+Output:
+- HTML report with embedded charts
+- PDF version for distribution
+- Send via email every Monday 8am
+
+Automate this to run weekly. (Pro/Max plan)
+```
+
+### Data Quality Monitoring
+
+```
+Set up data quality checks:
+
+Dataset: user_events table (BigQuery)
+
+Checks to implement:
+1. Completeness
+   - No null values in critical fields
+   - Expected row count (±20% of 7-day average)
+
+2. Uniqueness
+   - No duplicate event_ids
+   - User_id format validation
+
+3. Timeliness
+   - Events processed within 1 hour
+   - No data gaps > 30 minutes
+
+4. Validity
+   - Timestamps in reasonable range
+   - Numeric fields within expected bounds
+   - Category values match allowed list
+
+Alert me if any check fails. Run checks every hour.
+Provide dashboard showing data quality trends.
+```
+
+### Feature Store Creation
+
+```
+Help me build a feature store for ML models:
+
+Raw data: user_profiles.csv, transactions.csv, events.csv
+
+Features to engineer:
+1. User features:
+   - Total transactions (all time)
+   - Average transaction value
+   - Days since last transaction
+   - Transaction frequency (per month)
+   - Preferred categories
+
+2. Behavioral features:
+   - Page views last 7/30 days
+   - Session count last 7/30 days
+   - Engagement score (custom calculation)
+
+3. Temporal features:
+   - Day of week patterns
+   - Time of day patterns
+
+Requirements:
+- Update features daily
+- Store in format ready for model training
+- Handle missing values appropriately
+- Include feature documentation
+- Version control for features
+
+Create pipeline that computes and updates these features.
+```
+
+## Visualization Best Practices
+
+### Choose the Right Chart Type
+
+<CardGroup cols={3}>
+  <Card title="Comparisons" icon="chart-bar">
+    Bar charts, column charts
+  </Card>
+
+  <Card title="Trends" icon="chart-line">
+    Line charts, area charts
+  </Card>
+
+  <Card title="Distributions" icon="chart-simple">
+    Histograms, box plots
+  </Card>
+
+  <Card title="Relationships" icon="chart-scatter">
+    Scatter plots, correlation matrices
+  </Card>
+
+  <Card title="Composition" icon="chart-pie">
+    Pie charts, stacked bars
+  </Card>
+
+  <Card title="Geographic" icon="map">
+    Choropleth maps, bubble maps
+  </Card>
+</CardGroup>
+
+### Make Visualizations Interactive
+
+```
+Create an interactive dashboard where users can:
+- Filter by date range with a slider
+- Toggle between different metrics
+- Hover to see detailed values
+- Click on segments to drill down
+- Export current view as PNG
+
+Use Plotly or Recharts for interactivity.
+```
+
+### Design for Your Audience
+
+<Columns cols={2}>
+  <div>
+    **For Technical Audience:**
+    - Show detailed statistics
+    - Include error bars
+    - Display p-values
+    - Technical terminology OK
+  </div>
+  <div>
+    **For Executive Audience:**
+    - Focus on key insights
+    - Use simple, clear charts
+    - Highlight actionable items
+    - Plain language explanations
+  </div>
+</Columns>
+
+## Performance Optimization
+
+### Working with Large Datasets
+
+```
+I have a 10GB CSV file that's too large to process in memory.
+
+Help me:
+1. Process it in chunks
+2. Perform aggregations efficiently
+3. Create summary statistics
+4. Sample the data for visualization
+5. Identify outliers without loading everything
+
+Use appropriate tools (dask, polars, or chunking strategies).
+```
+
+### Query Optimization
+
+```
+This dashboard query is taking 30+ seconds to load.
+
+Current query: [paste SQL]
+
+Please optimize by:
+1. Identifying unnecessary joins
+2. Suggesting appropriate indexes
+3. Rewriting with better structure
+4. Using materialized views if appropriate
+5. Implementing caching strategy
+
+Goal: <5 second load time
+```
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="General Best Practices" icon="lightbulb" href="/best-practices/general">
+    Learn universal tips for all users
+  </Card>
+
+  <Card title="Developers Guide" icon="code" href="/best-practices/developers">
+    Collaborate with engineering on data pipelines
+  </Card>
+
+  <Card title="Marketing Guide" icon="megaphone" href="/best-practices/marketing">
+    Apply analytics to marketing optimization
+  </Card>
+</CardGroup>

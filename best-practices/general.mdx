@@ -1,0 +1,384 @@
+---
+title: "General Best Practices"
+description: "Golden rules for effective use of HappyCapy that apply to everyone"
+---
+
+## Golden Rules for Effective Use
+
+### 1. Clearly describe your goals, not the process
+
+<Columns cols={2}>
+  <div>
+    **Bad Prompt:**
+    ```
+    First use pandas to read the CSV,
+    then use matplotlib to draw the graph
+    ```
+  </div>
+  <div>
+    **Good Prompt:**
+    ```
+    Analyze this sales data, generate a
+    trend chart, and tell me the key findings
+    ```
+  </div>
+</Columns>
+
+<Tip>
+  HappyCapy automatically selects the best tools and methods. You just need to state the goal.
+</Tip>
+
+### 2. Provide sufficient context
+
+<Columns cols={2}>
+  <div>
+    **Bad Prompt:**
+    ```
+    Help me fix this bug
+    ```
+  </div>
+  <div>
+    **Good Prompt:**
+    ```
+    There is no response after the user
+    clicks the login button.
+
+    Environment: React 18 + TypeScript
+    File: src/components/LoginForm.tsx
+    Browser console shows:
+      'Cannot read property of undefined'
+
+    Expected behavior: After clicking,
+    an API request should be sent and
+    jump to the homepage
+
+    Please help me locate the problem
+    and fix it.
+    ```
+  </div>
+</Columns>
+
+### 3. Work iteratively, don't ask for one-time perfection
+
+<Columns cols={2}>
+  <div>
+    **Bad Approach:**
+    ```
+    Help me build a complete e-commerce
+    website, including user authentication,
+    product list, shopping cart, payment
+    integration, order management, review
+    system, recommendation algorithm...
+    ```
+  </div>
+  <div>
+    **Good Approach:**
+    ```
+    Help me build the basic framework first:
+    - Home page displays product list
+    - Product details page
+    - Simple shopping cart (no backend required)
+
+    After completion, we will gradually
+    add functions.
+    ```
+  </div>
+</Columns>
+
+**Principle:** Break down big tasks → implement step by step → verify each step
+
+### 4. Leverage multi-modal capabilities
+
+You can provide input in multiple formats:
+
+- **Screenshots**: Paste directly (Cmd/Ctrl + V)
+- **Files**: Upload PDF, Excel, Word, images
+- **Web links**: Share URLs for analysis
+- **Audio/Video**: Provide media for transcription and analysis
+
+### 5. Save successful workflows
+
+When a prompt works well:
+
+1. Record it (copy to notes)
+2. Mark usage scenarios
+3. Reuse or fine-tune directly next time
+
+<Tip>
+  You can customize successful workflows as Skills, and all users can do this! We encourage you to create your own skill library to perform repetitive tasks with one click. Pro/Max users can also set up scheduled automation.
+</Tip>
+
+### 6. Regular checkpoints to facilitate rollback
+
+For long tasks or experimental work:
+
+```
+Before implementing this function, let me confirm that
+the current code has been saved.
+```
+
+**Save strategies:**
+- If using Git: commit regularly
+- If in HappyCapy workspace: Download backups regularly
+
+Think of it like saving in a game - easily roll back when something goes wrong.
+
+### 7. Identify your skill level
+
+At the beginning of the conversation, state your experience level:
+
+```
+I'm a designer and don't know much about programming.
+Please explain in simple language.
+```
+
+Or:
+
+```
+I am a senior developer, familiar with React and TypeScript.
+You can give me code directly.
+```
+
+HappyCapy will adjust communication style and level of detail accordingly.
+
+### 8. Don't be afraid to "start over"
+
+If the conversation goes astray:
+
+<Warning>
+  Don't try to correct the AI's mistakes in a long thread. Directly open a new conversation and re-describe the task. It's usually faster than correction.
+</Warning>
+
+Think of it like using a "slot machine":
+1. Save state
+2. Try it for 30 minutes
+3. If satisfied, accept it; if not, try again
+
+### 9. Utilize HappyCapy's skill system
+
+HappyCapy supports Skills from the open source community, covering:
+
+<CardGroup cols={3}>
+  <Card title="Image & Video" icon="image">
+    Generation and editing
+  </Card>
+  <Card title="Documents" icon="file">
+    PDF, Word, Excel, PPT
+  </Card>
+  <Card title="Web Development" icon="globe">
+    Frontend and backend
+  </Card>
+  <Card title="Data Analysis" icon="chart-line">
+    Visualization and ML
+  </Card>
+  <Card title="Research" icon="book">
+    Academic papers
+  </Card>
+  <Card title="Automation" icon="bolt">
+    Email, workflows
+  </Card>
+</CardGroup>
+
+**How to use Skills:**
+
+```
+Use ai-image-generation skill to help me generate a tech poster
+```
+
+```
+Use comprehensive-researcher skill to research
+'Latest Progress in Large Language Models'
+```
+
+View all available Skills by entering `/help` in the HappyCapy dialog.
+
+### 10. Max Plan Users: Embrace the "Infinite" Mindset
+
+If you use Max Plan:
+
+- Don't worry about token usage
+- Be bold and try complex tasks
+- Let HappyCapy work autonomously for longer
+- Iterate multiple times until satisfied
+
+That's the value of Max Plan: using AI with zero anxiety.
+
+## Common Misconceptions
+
+<AccordionGroup>
+  <Accordion icon="warning" title="Myth 1: AI should give me perfect results the first time">
+    **Reality:** AI is a collaborative partner, not a magic wand.
+
+    **Correct mindset:**
+    - Work iteratively
+    - Provide feedback
+    - Incremental improvement
+  </Accordion>
+
+  <Accordion icon="warning" title="Myth 2: My prompts are not 'professional' enough and AI won't understand">
+    **Reality:** Natural language is the best prompt.
+
+    **Correct method:**
+    - Describe your needs like chatting with a friend
+    - No need to learn "Prompt Engineering"
+    - HappyCapy will understand your intentions
+  </Accordion>
+
+  <Accordion icon="warning" title="Myth 3: I don't understand technology and can't use AI programming tools">
+    **Reality:** HappyCapy is designed for non-technical people.
+
+    **Evidence:**
+    - Finance teams with zero programming experience execute complex data workflows
+    - Legal teams with no development background build accessible applications in one hour
+    - Product designers directly implement frontend functions
+  </Accordion>
+</AccordionGroup>
+
+## Quick Start by Role
+
+### Non-Technical People (3 steps)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="Week 1">
+    Try simple tasks: "Make me a poster", "Analyze this Excel"
+  </Accordion>
+
+  <Accordion icon="calendar" title="Week 2">
+    Save effective prompts and build your own workflow library
+  </Accordion>
+
+  <Accordion icon="calendar" title="Week 3">
+    Set up automation (Pro/Max) to handle repetitive tasks
+  </Accordion>
+</AccordionGroup>
+
+### Developers (3 steps)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="Day 1">
+    Use HappyCapy to understand unfamiliar code bases and generate tests
+  </Accordion>
+
+  <Accordion icon="calendar" title="Week 1">
+    Let HappyCapy implement small functions independently, you focus on reviewing
+  </Accordion>
+
+  <Accordion icon="calendar" title="Month 1">
+    Build a self-validation loop to let HappyCapy work autonomously for long periods
+  </Accordion>
+</AccordionGroup>
+
+### Data Analysts (3 steps)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="Day 1">
+    Upload data and let HappyCapy do exploratory analysis
+  </Accordion>
+
+  <Accordion icon="calendar" title="Week 1">
+    Let HappyCapy build an interactive dashboard
+  </Accordion>
+
+  <Accordion icon="calendar" title="Month 1">
+    Save common analysis workflows as reusable tools
+  </Accordion>
+</AccordionGroup>
+
+### Marketers (3 steps)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="Day 1">
+    Batch generate copy variations
+  </Accordion>
+
+  <Accordion icon="calendar" title="Week 1">
+    Automated advertising creative production
+  </Accordion>
+
+  <Accordion icon="calendar" title="Month 1">
+    Connect to MCP servers (Meta Ads, Google Ads) and build marketing automation
+  </Accordion>
+</AccordionGroup>
+
+### Product Designers (3 steps)
+
+<AccordionGroup>
+  <Accordion icon="calendar" title="Day 1">
+    Paste mockup and generate frontend code prototype
+  </Accordion>
+
+  <Accordion icon="calendar" title="Week 1">
+    Implement simple style adjustments directly
+  </Accordion>
+
+  <Accordion icon="calendar" title="Month 1">
+    Build a library of design system components
+  </Accordion>
+</AccordionGroup>
+
+## Productivity Comparison
+
+| Task Type | Traditional Time | HappyCapy Time | Time Saved |
+|-----------|-----------------|----------------|------------|
+| Debugging complex infrastructure issues | 10-15 minutes | ~5 minutes | 50% |
+| Generate advertising copy in batches | 2 hours | 15 minutes | 87% |
+| Understand unfamiliar code bases | Hours | Few minutes | 80-90% |
+| ML concept research and learning | 1 hour | 10-20 minutes | 80% |
+| Create a data visualization dashboard | 1-2 days | Hours | 75% |
+| Global copywriting changes | 1 week | 1 hour | 95% |
+| New employee onboarding code base | Weeks | Several days | 70% |
+| Design to frontend implementation | Back and forth for several days | Hours | 66% |
+
+**Overall productivity improvement: 2-4x**
+
+## Final Advice
+
+### Remember the core philosophy
+
+<Note>
+  - AI should work for everyone - not just developers
+  - Focus on "what you want" - not "how"
+  - Zero-anxiety use - Max Plan unlimited usage
+  - Chill like a capybara - relaxed, friendly, getting along with everyone
+</Note>
+
+### You don't need to:
+
+- Learn the command line
+- Understand programming
+- Configure complex environments
+- Memorize prompt engineering tips
+- Worry about usage limits (Max Plan)
+
+### All you need is:
+
+- Say what you want to do
+- Trust HappyCapy to choose the right tool
+- Work iteratively and gradually improve
+- Enjoy the productivity leap brought by AI
+
+## Need Help?
+
+<CardGroup cols={2}>
+  <Card title="Join Discord" icon="discord" href="https://discord.gg/N3vdDbvsF8">
+    Connect with the community
+  </Card>
+
+  <Card title="Email Support" icon="envelope" href="mailto:support@happycapy.ai">
+    Get help from our team
+  </Card>
+
+  <Card title="Official Website" icon="globe" href="https://happycapy.ai/">
+    Learn more about HappyCapy
+  </Card>
+
+  <Card title="Book a Walkthrough" icon="calendar" href="https://calendly.com/trickle-booking/happycapy-walkthrough">
+    Get a personalized demo
+  </Card>
+</CardGroup>
+
+---
+
+**HappyCapy, HappyYou**
+
+Let AI become your most powerful assistant and return to the joy of work.

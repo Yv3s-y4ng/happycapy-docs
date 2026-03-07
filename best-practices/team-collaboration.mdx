@@ -1,0 +1,559 @@
+---
+title: "Team Collaboration & Document Management"
+description: "How teams can leverage HappyCapy for automated documentation, meeting management, and knowledge sharing"
+---
+
+## Core Scenarios
+
+### Scenario 1: Automatically Generate and Update Documents
+
+**Real Case:** The security team uses AI to combine multiple documents to create runbooks and troubleshooting guides.
+
+#### How to do it in HappyCapy
+
+Request comprehensive document creation:
+
+```
+Help me create a 'New Employee Onboarding Guide':
+
+Input documents:
+- Company policy document (policy.pdf)
+- Tech stack overview (tech_stack.md)
+- FAQ (faq.docx)
+- Team contacts (contacts.xlsx)
+
+Output requirements:
+- Markdown format with clear section structure
+- Extract key information and remove redundancy
+- Add table of contents and quick index
+- Add "Further Reading" links at the end of each section
+- Finally generate a PDF version
+```
+
+#### What HappyCapy Will Do
+
+<CardGroup cols={2}>
+  <Card title="Read Documents" icon="file-import">
+    Read all input documents
+  </Card>
+
+  <Card title="Extract & Organize" icon="list-check">
+    Extract and organize information
+  </Card>
+
+  <Card title="Structure Content" icon="sitemap">
+    Generate structured documents
+  </Card>
+
+  <Card title="Multiple Formats" icon="file-export">
+    Output Markdown and PDF versions
+  </Card>
+</CardGroup>
+
+### Scenario 2: Meeting Minutes and Action Item Management
+
+#### How to do it in HappyCapy
+
+Transform meeting transcripts into actionable documents:
+
+```
+This is the transcript of today's product meeting:
+[Paste transcript]
+
+Please:
+1. Summarize key discussion points
+2. Extract all action items and label owners and due dates
+3. Identify unresolved issues
+4. Generate structured meeting minutes
+5. Create a task-tracking table (CSV format) that can be
+   imported into Asana/Jira
+```
+
+#### What HappyCapy Will Do
+
+- Analyze meeting content
+- Extract key information
+- Generate easy-to-read minutes
+- Create an actionable to-do list
+
+## Team Collaboration Suggestions
+
+### 1. Share Successful Workflows
+
+Build a culture of knowledge sharing:
+
+<AccordionGroup>
+  <Accordion icon="users" title="Demonstrate to Each Other">
+    Team members show each other how they use HappyCapy for their tasks
+  </Accordion>
+
+  <Accordion icon="lightbulb" title="Discover New Use Cases">
+    Learn new ways to use HappyCapy from teammates' examples
+  </Accordion>
+
+  <Accordion icon="book" title="Build Best Practices Library">
+    Create a team library of best practices and effective prompts
+  </Accordion>
+</AccordionGroup>
+
+### 2. Create a Team Knowledge Base
+
+Systematize team knowledge:
+
+<Tip>
+  Save frequently used prompts in team documents or optimize them as Skills. Newcomers can install and use them directly. Continuously optimize and iterate.
+</Tip>
+
+**Example Knowledge Base Structure:**
+
+```
+team-knowledge-base/
+├── prompts/
+│   ├── code-review-checklist.md
+│   ├── bug-report-template.md
+│   └── feature-spec-template.md
+├── skills/
+│   ├── team-report-generator/
+│   └── sprint-summary/
+└── guides/
+    ├── onboarding-guide.md
+    └── common-workflows.md
+```
+
+### 3. Update Documents at the End of Sessions
+
+Maintain living documentation:
+
+```
+After completing [task] using HappyCapy:
+
+1. Summarize what we accomplished
+2. Document the workflow used
+3. Note any challenges and how we solved them
+4. Update team documentation with learnings
+5. Suggest any improvements for next time
+```
+
+This ensures team knowledge grows with each project.
+
+## Real-World Examples
+
+### Example 1: Project Handoff Documentation
+
+```
+Create a comprehensive project handoff document:
+
+Project: [project name]
+Context: [brief description]
+
+Include documents from:
+- Architecture decisions (architecture.md)
+- API documentation (swagger.yaml)
+- Database schema (schema.sql)
+- Deployment guides (deploy-notes.md)
+- Known issues (issues.md)
+
+Generate:
+1. Executive Summary (for stakeholders)
+2. Technical Overview (for engineers)
+3. Quick Start Guide (for new team members)
+4. Troubleshooting Guide (common issues + solutions)
+5. Future Roadmap (planned improvements)
+
+Format: Markdown + PDF
+Tone: Clear, concise, assumes reader is smart but unfamiliar
+      with the project
+```
+
+### Example 2: Sprint Retrospective Documentation
+
+```
+Process our sprint retrospective notes:
+
+[Paste raw notes or upload document]
+
+Create:
+1. Summary of what went well
+2. Summary of challenges faced
+3. Action items with owners and deadlines
+4. Metrics comparison (planned vs. actual)
+5. Key learnings
+6. Carry-over items for next sprint
+
+Format as:
+- Markdown document for team reference
+- Presentation slides for stakeholder update
+- CSV of action items for project management tool
+```
+
+### Example 3: Knowledge Base Article
+
+```
+Create a knowledge base article from this support thread:
+
+[Paste support conversation]
+
+Article should include:
+1. Problem statement (what was the issue?)
+2. Root cause (why did it happen?)
+3. Solution (step-by-step instructions)
+4. Prevention (how to avoid in future)
+5. Related issues (links to similar problems)
+
+Format:
+- Clear headings
+- Code blocks for technical instructions
+- Screenshots references (describe what should be shown)
+- Search-friendly keywords
+
+Audience: Technical support team and advanced users
+```
+
+### Example 4: Team Wiki Update
+
+```
+Our team wiki is outdated. Help me update it:
+
+Current wiki: [provide link or paste content]
+
+Recent changes:
+- New team members: [list]
+- Deprecated tools: [list]
+- New processes: [describe]
+- Updated contact information: [provide]
+
+Please:
+1. Identify outdated sections
+2. Suggest updates for each section
+3. Reorganize for better navigation
+4. Add missing information
+5. Remove redundant content
+6. Ensure consistent formatting
+
+Output updated wiki content in Markdown.
+```
+
+### Example 5: Cross-Team Alignment Document
+
+```
+Create an alignment document for cross-team project:
+
+Teams involved:
+- Engineering: [focus area]
+- Design: [focus area]
+- Product: [focus area]
+- Marketing: [focus area]
+
+Project: [description]
+
+Document should include:
+1. Shared goals and success metrics
+2. Each team's responsibilities
+3. Dependencies between teams
+4. Communication protocols
+5. Timeline and milestones
+6. Decision-making process
+7. Risk assessment
+
+Format: Collaborative document that all teams can reference
+Tone: Clear, neutral, focuses on alignment not blame
+```
+
+## Advanced Collaboration Workflows
+
+### Version-Controlled Documentation
+
+```
+Help me set up documentation workflow with version control:
+
+Requirements:
+1. Markdown-based documentation
+2. Git version control
+3. Automatic table of contents generation
+4. Link validation
+5. Change log generation
+
+Set up:
+- Directory structure
+- Pre-commit hooks for validation
+- GitHub Actions for automated checks
+- Contributing guidelines for team
+
+Provide setup instructions and templates.
+```
+
+### Automated Status Reports
+
+```
+Generate weekly team status report:
+
+Data sources:
+- GitHub: PRs merged, issues closed
+- Jira: Tickets completed, in progress
+- Team calendar: Key meetings and decisions
+
+Report format:
+1. Executive Summary
+   - Key accomplishments
+   - Notable blockers
+   - Next week's priorities
+
+2. Detailed Metrics
+   - Velocity (story points completed)
+   - Bug resolution rate
+   - PR review turnaround time
+
+3. Team Highlights
+   - Individual contributions
+   - Learning and development
+
+4. Upcoming
+   - Next sprint goals
+   - Key dates and deadlines
+
+Automate this to run every Friday at 4pm. (Pro/Max plan)
+```
+
+### Onboarding Automation
+
+```
+Create an automated onboarding workflow for new engineers:
+
+Day 1 tasks:
+- Account setup guide (step-by-step)
+- Development environment setup
+- First commit tutorial
+- Team introduction
+
+Week 1 tasks:
+- Codebase architecture overview
+- Common workflows documentation
+- Starter tasks (good first issues)
+
+Week 2-4 tasks:
+- Progressive complexity tasks
+- Mentorship pairing schedule
+- Check-in points
+
+Generate:
+1. New hire checklist
+2. Automated email sequence (draft content)
+3. Slack messages to send at key points
+4. Manager check-in guide
+
+Make it comprehensive but not overwhelming.
+```
+
+### Decision Documentation
+
+```
+Document this architectural decision:
+
+Context: [describe situation]
+Options considered: [list options]
+Decision: [what we chose]
+Rationale: [why we chose it]
+
+Format as Architecture Decision Record (ADR):
+- Title: [concise description]
+- Status: [proposed/accepted/deprecated]
+- Context: [background and constraints]
+- Decision: [what we decided]
+- Consequences: [positive and negative outcomes]
+- Alternatives: [what we didn't choose and why]
+
+Add to our ADR collection in docs/decisions/
+```
+
+### Cross-Functional Planning
+
+```
+Facilitate cross-functional planning session:
+
+Goal: Plan Q2 product launch
+
+Participants:
+- Engineering: [team size and focus]
+- Design: [team size and focus]
+- Product: [priorities]
+- Marketing: [priorities]
+
+Help me:
+1. Create planning session agenda
+2. Generate discussion prompts for each function
+3. Create dependency mapping template
+4. Timeline visualization (Gantt chart data)
+5. Resource allocation planning
+6. Risk identification framework
+7. Success metrics definition
+
+Output:
+- Pre-read document for participants
+- Session facilitation guide
+- Templates for capturing decisions
+- Post-session summary format
+```
+
+## Collaboration Best Practices
+
+### Establish Team Conventions
+
+<CardGroup cols={2}>
+  <Card title="Naming Conventions" icon="tag">
+    Consistent naming for files, branches, tasks
+  </Card>
+
+  <Card title="Documentation Standards" icon="book">
+    Template formats, required sections
+  </Card>
+
+  <Card title="Review Process" icon="magnifying-glass">
+    Who reviews, approval criteria
+  </Card>
+
+  <Card title="Communication Channels" icon="comments">
+    When to use Slack vs. email vs. docs
+  </Card>
+</CardGroup>
+
+### Create Reusable Templates
+
+```
+Create a reusable template for [document type]:
+
+Standard sections:
+- [list required sections]
+
+Optional sections:
+- [list optional sections]
+
+Include:
+- Markdown template file
+- Usage instructions
+- Example filled-in version
+- Checklist for completeness
+
+Save in team templates repository.
+```
+
+### Implement Review Cycles
+
+```
+Set up documentation review workflow:
+
+1. Author creates draft
+2. Peer review (technical accuracy)
+3. Editor review (clarity, grammar)
+4. Stakeholder review (alignment)
+5. Final approval
+
+Create:
+- Review checklist for each stage
+- Feedback template
+- Approval process
+- Version tracking system
+
+Integrate with our existing tools: [list tools]
+```
+
+### Knowledge Capture
+
+<Tip>
+  After solving a difficult problem, immediately document it:
+
+  ```
+  We just solved [problem]. Help me document this:
+
+  1. What was the problem?
+  2. How did we diagnose it?
+  3. What was the solution?
+  4. How can we prevent it in future?
+  5. What did we learn?
+
+  Add to team knowledge base under [category].
+  ```
+</Tip>
+
+## Measuring Collaboration Success
+
+Track these metrics to measure improvement:
+
+| Metric | Before HappyCapy | After HappyCapy | Improvement |
+|--------|-----------------|----------------|-------------|
+| Time to onboard new team member | 2-3 weeks | 3-5 days | 70% faster |
+| Meeting minutes turnaround | 2-3 days | Same day | 75% faster |
+| Document update frequency | Monthly | Weekly | 4x more frequent |
+| Knowledge base articles | Sporadic | Systematic | Consistent growth |
+| Cross-team alignment time | Days of back-and-forth | Single document | 80% faster |
+
+## Tips for Effective Team Collaboration
+
+### Regular Sync Points
+
+Schedule regular documentation updates:
+- **Daily**: Update task status
+- **Weekly**: Sprint summaries, team updates
+- **Monthly**: Retrospectives, metrics reviews
+- **Quarterly**: Strategic planning, roadmap updates
+
+### Async Communication
+
+```
+Convert this Slack discussion into a decision document:
+
+[Paste Slack conversation]
+
+Extract:
+1. Problem being discussed
+2. Proposed solutions
+3. Concerns raised
+4. Final decision
+5. Action items
+
+Format as a durable document that can be referenced later,
+so people don't need to dig through Slack history.
+```
+
+### Transparent Documentation
+
+Make information accessible:
+- Use consistent naming
+- Create clear folder structures
+- Add search-friendly tags
+- Link related documents
+- Keep documentation close to code
+
+### Continuous Improvement
+
+```
+Review our team's documentation practices:
+
+Current state:
+- Tools we use: [list]
+- Pain points: [list]
+- What works well: [list]
+
+Suggest improvements:
+1. Process optimizations
+2. Tool integrations
+3. Template updates
+4. Training needs
+
+Prioritize by: impact vs. effort
+```
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="General Best Practices" icon="lightbulb" href="/best-practices/general">
+    Learn universal tips for all users
+  </Card>
+
+  <Card title="Developers Guide" icon="code" href="/best-practices/developers">
+    Technical collaboration best practices
+  </Card>
+
+  <Card title="Non-Technical Guide" icon="users" href="/best-practices/non-technical">
+    Collaborate across technical and non-technical teams
+  </Card>
+</CardGroup>

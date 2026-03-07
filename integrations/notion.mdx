@@ -1,0 +1,141 @@
+---
+title: "Notion Integration"
+description: "Connect HappyCapy to Notion for automated note-taking and document management"
+---
+
+After connecting to Notion, HappyCapy can help you read, edit, and create Notion pages, automatically organize notes, generate documents, and more.
+
+## Get Notion Token
+
+Follow these 4 steps to set up your Notion integration:
+
+<Steps>
+  <Step title="Create Notion Integration">
+    1. Visit [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations)
+    2. Click the **+ New integration** button
+    3. Fill in the Integration information:
+       - **Name:** Choose any name (e.g., "HappyCapy")
+       - **Associated workspace:** Select your workspace
+       - **Capabilities:** Keep the defaults (Read content, Update content, Insert content)
+    4. Once created, copy the **Internal Integration Token** (looks like `ntn_xxxxxxxxxxxx`)
+  </Step>
+
+  <Step title="Authorize Integration to Access Pages">
+    <Warning>
+    **Critical step:** After obtaining the Token, you must authorize the Integration to access your pages!
+    </Warning>
+
+    For each page you want HappyCapy to access:
+    1. Open the page in Notion
+    2. Click the **···** button (top right corner)
+    3. Select **Connections** → Find your Integration (e.g., "HappyCapy")
+    4. Click to confirm authorization
+
+    <Tip>
+    Each page you want HappyCapy to access requires separate authorization. If a page has subpages, they will automatically inherit the permissions.
+    </Tip>
+  </Step>
+
+  <Step title="Get Page ID">
+    To operate on a Notion page, you need to know the page's ID:
+
+    1. Open your Notion page
+    2. Look at the URL in your browser's address bar
+    3. The last segment (32 characters) is the page ID
+
+    **Example:**
+    ```
+    https://www.notion.so/My-Page-3065ab5584b5803e8572fcb253106e5a
+    ```
+
+    The page ID is: `3065ab5584b5803e8572fcb253106e5a`
+  </Step>
+
+  <Step title="Use in HappyCapy">
+    Now you're ready to use Notion with HappyCapy! Simply provide your Token and page link or ID.
+  </Step>
+</Steps>
+
+## How to Use in HappyCapy
+
+After preparing your Token and page ID, you can interact with Notion like this:
+
+### Read a Notion Page
+
+```
+读取我的 Notion 页面
+
+Token: ntn_your_token_here
+页面链接: https://www.notion.so/your-page-link
+```
+
+### Update Page Content
+
+```
+帮我更新 Notion 页面的内容
+
+Token: ntn_your_token_here
+页面 ID: 3065ab5584b5803e8572fcb253106e5a
+新内容: [your content here]
+```
+
+HappyCapy will automatically complete the operation for you!
+
+## Usage Examples
+
+<CardGroup cols={2}>
+  <Card title="Read Page" icon="book-open">
+    "Help me read the contents of this Notion page"
+  </Card>
+  <Card title="Create Page" icon="file-plus">
+    "Help me create a new page in Notion"
+  </Card>
+  <Card title="Organize Notes" icon="list-check">
+    "Organize this conversation into a Notion page"
+  </Card>
+  <Card title="Batch Operations" icon="layer-group">
+    "Help me batch update these Notion pages"
+  </Card>
+</CardGroup>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title='Why does it show "page not found"?'>
+    Check whether you completed the page authorization step. Remember to add your Integration in the **Connections** section of the page settings!
+
+    Common causes:
+    - Integration not added to the specific page
+    - Wrong page ID
+    - Integration deleted or Token regenerated
+  </Accordion>
+
+  <Accordion title="Do subpages also need authorization?">
+    If the parent page has been authorized, child pages automatically inherit the permissions. However, if a subpage was created separately (not as a child), it requires separate authorization.
+  </Accordion>
+
+  <Accordion title="Will the Token expire?">
+    The Notion Integration Token does not expire unless you manually delete or regenerate it. You can use the same Token indefinitely as long as it remains active in your Notion settings.
+  </Accordion>
+
+  <Accordion title="Can I use multiple workspaces?">
+    Yes! You can create separate Integrations for different workspaces. Each workspace requires its own Integration and Token.
+  </Accordion>
+</AccordionGroup>
+
+## Security Best Practices
+
+<Note>
+- Only authorize the Integration for pages it needs to access
+- Regularly review authorized pages in your Notion settings
+- Don't share your Token publicly
+- If you suspect a Token leak, regenerate it immediately in the Notion integrations settings
+</Note>
+
+<Card
+  title="Need help?"
+  icon="question"
+  href="/integrations/contact"
+>
+  Contact our support team for assistance with Notion integration
+</Card>

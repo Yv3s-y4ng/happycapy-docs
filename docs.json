@@ -8,115 +8,96 @@
     "dark": "#0284c7"
   },
   "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Getting Started",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "getting-started/quickstart",
+              "getting-started/faq"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Feature Guides",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Feature Guides",
             "pages": [
-              "api-reference/introduction"
+              "guides/skills",
+              "guides/multi-agent",
+              "guides/mcp",
+              "guides/automations"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Best Practices",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": [
+              "best-practices/index",
+              "best-practices/general"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "By Role",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "best-practices/developers",
+              "best-practices/non-technical",
+              "best-practices/product-design",
+              "best-practices/marketing",
+              "best-practices/data-analysis",
+              "best-practices/research",
+              "best-practices/team-collaboration"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "groups": [
+          {
+            "group": "Platform Integrations",
+            "pages": [
+              "integrations/index",
+              "integrations/github",
+              "integrations/notion"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "integrations/vscode",
+              "integrations/contact"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    ]
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Get Started",
+      "href": "https://happycapy.ai"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/happycapy",
+      "github": "https://github.com/Yv3s-y4ng"
     }
   }
 }

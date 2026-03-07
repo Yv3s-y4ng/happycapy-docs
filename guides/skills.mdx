@@ -1,0 +1,244 @@
+---
+title: "Skills Guide"
+description: "Learn how to use, find, and create Skills to extend HappyCapy's capabilities"
+---
+
+## What are Skills?
+
+Skills are "ability plugins" for HappyCapy that transform AI from "good at chatting" to "good at working." They're not just simple text instructions - Skills can:
+
+- **Call external APIs**: Connect to GitHub, Notion, Google, and other third-party services to achieve cross-platform data synchronization
+- **Run Python/JavaScript scripts**: Perform complex data processing, image generation, video editing, and other tasks
+- **Use MCP protocol** (Model Context Protocol): Combine various tool capabilities like Lego bricks
+
+<Note>
+Skills are the next generation of software: lightweight (a few KB text files), open source (GitHub shared), and easy to edit (5 minutes to customize). No need to install bloated apps - get professional functionality with just one Skill.
+</Note>
+
+### Examples of what Skills can do
+
+<CardGroup cols={2}>
+  <Card title="Frontend Slides" icon="presentation-screen">
+    Create richly animated HTML presentations with interactive effects and modern design
+  </Card>
+
+  <Card title="3D Web Experience" icon="cube">
+    Build immersive 3D web experiences using Three.js and WebGL technologies
+  </Card>
+
+  <Card title="Redbook Creator" icon="image">
+    Create Xiaohongshu-style posts with titles, text, tags, and beautiful pictures
+  </Card>
+
+  <Card title="Resume Optimizer" icon="file-user">
+    Optimize resumes for specific job descriptions with data-driven improvements
+  </Card>
+</CardGroup>
+
+## Why Skills are "Next Generation Software"
+
+<Columns cols={2}>
+  <div>
+    **Traditional Software**
+    - Several hundred MB installation package
+    - Paid subscription system
+    - Fixed functionality, can't be changed
+    - Closed source, opaque
+  </div>
+
+  <div>
+    **Skills (Next Generation)**
+    - Several KB text files
+    - Completely free and open source
+    - Easy to edit and customize
+    - Open source and learnable
+  </div>
+</Columns>
+
+## How to Use Skills
+
+Using Skills is super easy - HappyCapy will automatically call them according to your needs.
+
+### Method 1: Natural Language (Recommended)
+
+Just say what you want to do, and HappyCapy will automatically select the appropriate Skill.
+
+```
+Generate an illustration of a capybara
+```
+
+HappyCapy will automatically invoke the image-generation Skill.
+
+<Tip>
+Most of the time, natural language is enough. HappyCapy will automatically identify and call the most appropriate Skill.
+</Tip>
+
+### Method 2: Manual Selection
+
+You can click the **Skills** button in the dialog box or enter the slash command `/` to bring up the Skill selection menu. Browse installed Skills and manually select one for use.
+
+## How to Find Skills
+
+Skills are open source, and developers around the world are contributing various practical skills. You can find them in several ways:
+
+### Method 1: Ask HappyCapy Directly (Easiest)
+
+```
+Help me find a data-processing Skill
+```
+
+HappyCapy will use the built-in `find-skills` function to automatically search the open source community and recommend the most suitable Skills to you.
+
+### Method 2: Search on Community Platforms
+
+<CardGroup cols={3}>
+  <Card title="GitHub" icon="github">
+    Search for "Skills" - thousands of open source skills available
+  </Card>
+
+  <Card title="SkillsMP" icon="store">
+    Skills Marketplace - browse skills by category
+  </Card>
+
+  <Card title="SkillsSH" icon="users">
+    Community sharing platform - discover creative skills from other users
+  </Card>
+</CardGroup>
+
+<Note>
+All Skills are open source. You can view the source code, learn from it, modify it, and share your improvements!
+</Note>
+
+## How to Create Skills
+
+Creating a Skill is as simple as describing the functionality you want in natural language.
+
+### Complete Example: Job Resume Optimizer
+
+<AccordionGroup>
+  <Accordion icon="lightbulb" title="The Pain Point">
+    "I submitted 100 resumes but got no response and don't know how to change them."
+  </Accordion>
+
+  <Accordion icon="hammer" title="The Solution">
+    Create a Skill dedicated to optimizing your resume.
+
+    ```
+    Help me create a Skill:
+
+    Name: Resume Optimizer
+
+    Function:
+    Input: My resume + target job JD
+
+    Process:
+    1. Analyze JD keywords and requirements
+    2. Compare with the resume and identify matches and gaps
+    3. Optimize wording to better fit the role
+    4. Quantify achievements with data
+    5. Improve layout to highlight key points
+    6. Generate 3 versions: conservative / balanced / aggressive
+
+    Output:
+    - 3 optimized resumes
+    - Usage guidance for each version
+    - Interview preparation points
+
+    And help me test it!
+    ```
+  </Accordion>
+
+  <Accordion icon="check" title="Using Your New Skill">
+    Once created, the Skill is saved in your Skill Store. Every time you submit your resume in the future, you only need to upload a new JD, and your Skill will automatically optimize it!
+  </Accordion>
+</AccordionGroup>
+
+### Creating Steps
+
+Just tell HappyCapy what skill you want to create! Describe:
+- **Name**: What to call your Skill
+- **Function**: What inputs it needs
+- **Process**: How it should work
+- **Output**: What it should produce
+
+<Tip>
+You can also adapt other people's Skills! If you feel that a Skill isn't perfect enough, you can make modifications based on it. Stand on the shoulders of giants and make tools more relevant to your needs.
+</Tip>
+
+## Skill Categories
+
+HappyCapy supports Skills across many domains:
+
+### AI & Multimedia
+- AI image generation (FLUX, Gemini, 50+ models)
+- AI video generation (Veo, Seedance, Wan, 40+ models)
+- Video processing and editing (FFmpeg, subtitles, editing)
+- Image enhancement and processing
+
+### Design & Frontend
+- 3D web experiences (Three.js, React Three Fiber)
+- Frontend design systems
+- Canvas design tools
+- Presentation generation (HTML/PPT)
+
+### Content Creation & Marketing
+- Xiaohongshu content generation
+- Reddit post creation
+- SEO content writing
+- Multi-platform marketing automation
+
+### Development Tools
+- GitHub integration
+- MCP integration
+- Better Auth best practices
+- Vercel/React/Next.js best practices
+
+### Data & Documents
+- Exploratory data analysis
+- Stock analysis
+- PDF/DOCX/XLSX processing
+- Data storytelling
+
+### Academic & Research
+- Academic paper writing
+- Research assistant
+- Scientific critical thinking
+- Hypothesis generation
+
+## The Charm of Skills
+
+<CardGroup cols={2}>
+  <Card title="Lightweight" icon="feather">
+    A text file, a few KB, taking up no space
+  </Card>
+
+  <Card title="Open Source" icon="code">
+    GitHub shared, contributed by global developers
+  </Card>
+
+  <Card title="Easy to Edit" icon="pen">
+    Customize it to what you want in 5 minutes
+  </Card>
+
+  <Card title="Free" icon="gift">
+    All Skills are open source and free
+  </Card>
+
+  <Card title="Community" icon="users">
+    Share your creativity and use the wisdom of others
+  </Card>
+
+  <Card title="Next Generation" icon="rocket">
+    This is what the next generation of software looks like!
+  </Card>
+</CardGroup>
+
+## Next Steps
+
+<Card
+  title="Explore the Skill Store"
+  icon="store"
+  href="https://happycapy.ai"
+>
+  Browse and install Skills from the community to extend HappyCapy's capabilities
+</Card>

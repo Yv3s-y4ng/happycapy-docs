@@ -1,0 +1,346 @@
+---
+title: "Developers Guide"
+description: "How developers can use HappyCapy efficiently for rapid prototyping, debugging, testing, and code exploration"
+---
+
+## Who This Is For
+
+Software Engineers, Data Engineers, DevOps, Security Engineers
+
+## Core Scenarios
+
+### Scenario 1: Rapid Prototyping (Automatic Acceptance Mode)
+
+**Real Case:** The product team uses "automatic acceptance mode" to let AI build Vim mode independently, with 70% of the code completed by AI.
+
+#### How to do it in HappyCapy
+
+<AccordionGroup>
+  <Accordion icon="code" title="Step 1: Start with Clean Git State">
+    Ensure you have a clean working directory before starting:
+
+    ```bash
+    git status  # Confirm there are no uncommitted changes
+    git checkout -b feature/new-prototype
+    ```
+  </Accordion>
+
+  <Accordion icon="list" title="Step 2: Give Detailed but Abstract Tasks">
+    Describe what you want, not how to build it:
+
+    ```
+    Help me implement a user authentication system:
+    - Support email + password login
+    - JWT token authentication
+    - Include registration, login, and password reset
+    - Write unit tests
+    - Run tests continuously during implementation and
+      fix errors proactively
+    ```
+  </Accordion>
+
+  <Accordion icon="check" title="Step 3: Check Progress and Take Over at 80%">
+    - HappyCapy automatically runs tests and fixes errors
+    - You focus on the last 20% of core business logic
+  </Accordion>
+</AccordionGroup>
+
+#### Best Practices
+
+<CardGroup cols={2}>
+  <Card title="Suitable For" icon="check">
+    - Edge functions
+    - Experimental prototypes
+    - Unfamiliar technology stacks
+  </Card>
+
+  <Card title="Not Suitable For" icon="xmark">
+    - Core business logic
+    - Security-critical code
+  </Card>
+</CardGroup>
+
+<Tip>
+  Submit Git checkpoints at each stage to facilitate rollback if needed.
+</Tip>
+
+### Scenario 2: Debugging Complex Problems
+
+**Real Case:** The security team reduced incident resolution time from 10-15 minutes to 5 minutes.
+
+#### How to do it in HappyCapy
+
+Provide comprehensive context for faster debugging:
+
+```
+Here is the error I encountered:
+[Paste stack trace]
+
+Here is the related documentation:
+[Upload or paste docs]
+
+Please help me:
+1. Trace the control flow and find the root cause
+2. Explain why this error occurs
+3. Provide a fix plan and possible side effects
+```
+
+#### Advantages of HappyCapy
+
+<CardGroup cols={2}>
+  <Card title="Automatic Code Reading" icon="magnifying-glass">
+    Automatically reads related code files
+  </Card>
+
+  <Card title="Stack Understanding" icon="brain">
+    Understands complex call stacks
+  </Card>
+
+  <Card title="Runnable Fixes" icon="wrench">
+    Provides repair code that can be run directly
+  </Card>
+
+  <Card title="Documentation" icon="book">
+    Generates runbook for future reference
+  </Card>
+</CardGroup>
+
+**Time savings: 50%**
+
+### Scenario 3: Test Driven Development (TDD)
+
+**Real Case:** Inference teams use AI to generate comprehensive unit tests that automatically cover edge cases.
+
+#### How to do it in HappyCapy
+
+Follow the TDD red-green-refactor cycle:
+
+```
+I need to implement a `calculateDiscount(price, userType)` function.
+
+First help me write test cases covering:
+- Normal cases (regular user, VIP user)
+- Boundary cases (price = 0, negative price, very large amount)
+- Exception cases (invalid user type, missing parameters)
+
+Then implement the function and ensure all tests pass.
+```
+
+#### TDD Workflow
+
+1. **HappyCapy writes tests first** (TDD red light)
+2. **Then writes the implementation** (TDD green light)
+3. **Automatically runs tests** and fixes problems found
+4. **You review the code** and make final optimizations
+
+#### Benefits
+
+- More comprehensive test coverage
+- Reduces missing boundary situations
+- Better code quality
+
+### Scenario 4: Quickly Understand Unfamiliar Codebases
+
+**Real Case:** The API team makes codebase exploration the "first stop", dramatically reducing context collection time.
+
+#### How to do it in HappyCapy
+
+Ask for a guided tour of the codebase:
+
+```
+I need to fix a login bug, but I am not familiar with
+this part of the codebase.
+
+Please help me:
+1. Find all files related to user login
+2. Explain the key steps of the login flow
+3. Identify which files handle authentication, session
+   management, and error handling
+4. Tell me which files need to be modified if I change
+   login logic
+```
+
+#### What HappyCapy Will Do
+
+<CardGroup cols={2}>
+  <Card title="Architecture Diagram" icon="sitemap">
+    Generate codebase architecture diagram
+  </Card>
+
+  <Card title="Dependencies" icon="link">
+    Show dependencies between files
+  </Card>
+
+  <Card title="Plain Explanations" icon="comments">
+    Explain complex logic in simple language
+  </Card>
+
+  <Card title="Precise Locations" icon="location-dot">
+    Directly locate key lines of code (file.ts:123)
+  </Card>
+</CardGroup>
+
+**Time Savings: From Hours → Minutes**
+
+### Scenario 5: Security Review and Infrastructure Changes
+
+**Real Case:** Security teams use AI to quickly review Terraform plans.
+
+#### How to do it in HappyCapy
+
+<AccordionGroup>
+  <Accordion icon="code" title="Generate Terraform Plan">
+    First, generate the plan locally:
+
+    ```bash
+    terraform plan -out=tfplan
+    terraform show -json tfplan > plan.json
+    ```
+  </Accordion>
+
+  <Accordion icon="upload" title="Upload and Request Review">
+    Upload to HappyCapy and ask:
+
+    ```
+    Review this Terraform plan and tell me:
+    1. Which resources will be created/modified/deleted?
+    2. Are there any security risks?
+    3. Are there operations that may cause downtime?
+    4. Will I regret this? 😅
+    ```
+  </Accordion>
+</AccordionGroup>
+
+#### HappyCapy Helps You
+
+- Identify high-risk operations (delete database, modify firewall rules)
+- Check whether permission configuration complies with best practices
+- Generate review checklist
+- Suggest safer alternatives
+
+## Developer-Specific Advice
+
+### 1. Establish a Self-Validation Loop
+
+Create prompts that include automatic validation:
+
+```
+When implementing this feature:
+- Run tests automatically after coding
+- Run lint checks for code style
+- If tests fail, analyze root cause and fix proactively
+- Finally return code that passes all tests
+```
+
+### 2. Develop Intuition for Task Classification
+
+<Columns cols={2}>
+  <div>
+    **Asynchronous Autonomous**
+    - Edge functionality
+    - Prototypes
+    - Unfamiliar technologies
+  </div>
+  <div>
+    **Synchronous Supervision**
+    - Core business logic
+    - Security critical code
+    - Production environment
+  </div>
+</Columns>
+
+### 3. Write Clear and Detailed Prompts
+
+<Note>
+  - Give explicit file paths when repositories have similar names
+  - State your coding style preference (e.g., "program functionally, avoid classes")
+  - Provide context (e.g., "This project uses TypeScript + React + Zustand")
+</Note>
+
+### 4. Use Multiple Instances for Parallel Work
+
+HappyCapy supports multiple tabs, each tab is an independent session:
+
+- One tab handles the frontend, another handles the backend
+- Maintain full context for each session
+- Switching is stress-free
+
+### 5. Treat Refactoring Like a "Slot Machine"
+
+<AccordionGroup>
+  <Accordion icon="save" title="Step 1: Save Current State">
+    ```bash
+    git commit -m "checkpoint before refactoring"
+    ```
+  </Accordion>
+
+  <Accordion icon="robot" title="Step 2: Let HappyCapy Work">
+    Let HappyCapy work autonomously for 30 minutes
+  </Accordion>
+
+  <Accordion icon="check" title="Step 3: Evaluate Results">
+    - If satisfied with the result, accept it
+    - If not satisfied, start over:
+      ```bash
+      git reset --hard HEAD~1
+      ```
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+  Starting over often has a higher success rate than correcting mistakes.
+</Tip>
+
+## Example Use Cases
+
+### Rapid API Endpoint Creation
+
+```
+Create a new REST API endpoint:
+- Path: POST /api/users/forgot-password
+- Accept email in request body
+- Generate secure reset token
+- Send email with reset link
+- Add rate limiting (5 requests per hour per email)
+- Write integration tests
+- Update API documentation
+```
+
+### Code Quality Improvements
+
+```
+Review and improve the code quality of src/utils/validation.ts:
+1. Add TypeScript types for better type safety
+2. Add JSDoc comments for public functions
+3. Refactor duplicated validation logic
+4. Add unit tests for edge cases
+5. Ensure consistent error handling
+```
+
+### Migration to New Framework
+
+```
+I need to migrate this React class component to a functional
+component with hooks:
+
+[Paste component code]
+
+Requirements:
+- Convert to functional component with hooks
+- Maintain all existing functionality
+- Use modern React patterns
+- Add TypeScript types
+- Keep the same prop interface
+```
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="General Best Practices" icon="lightbulb" href="/best-practices/general">
+    Learn universal tips that apply to all users
+  </Card>
+
+  <Card title="Team Collaboration" icon="users" href="/best-practices/team-collaboration">
+    Learn how to share workflows with your team
+  </Card>
+</CardGroup>

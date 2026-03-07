@@ -1,0 +1,410 @@
+---
+title: "Product Design & Prototyping"
+description: "How product designers can use HappyCapy to rapidly transform mockups into functional prototypes and implement visual changes"
+---
+
+## Who This Is For
+
+Product Designers, UI/UX Designers, Product Managers
+
+## Core Scenarios
+
+### Scenario 1: From Mockup to Functional Prototype
+
+**Real Case:** The design team directly pastes mockup screenshots to generate interactive frontend code.
+
+#### How to do it in HappyCapy
+
+<AccordionGroup>
+  <Accordion icon="pen-ruler" title="Step 1: Design the Interface">
+    Design your interface in Figma, Sketch, or any design tool
+  </Accordion>
+
+  <Accordion icon="camera" title="Step 2: Take a Screenshot and Paste">
+    - Take a screenshot of your mockup
+    - Paste it into HappyCapy (Cmd+V / Ctrl+V)
+  </Accordion>
+
+  <Accordion icon="comment" title="Step 3: Describe Interaction Logic">
+    Explain how the interface should behave:
+
+    ```
+    This is a login form. When the user clicks "Sign In":
+    1. Validate email format
+    2. Check if password is at least 8 characters
+    3. Show loading state on the button
+    4. On success, redirect to /dashboard
+    5. On error, show error message below the form
+    ```
+  </Accordion>
+</AccordionGroup>
+
+#### What HappyCapy Will Do
+
+<CardGroup cols={2}>
+  <Card title="Element Identification" icon="magnifying-glass">
+    Identify elements in mockup (buttons, input boxes, layouts)
+  </Card>
+
+  <Card title="Code Generation" icon="code">
+    Generate complete React component code
+  </Card>
+
+  <Card title="Interaction Logic" icon="gears">
+    Implement interaction logic
+  </Card>
+
+  <Card title="Live Preview" icon="eye">
+    Start development server and provide preview link
+  </Card>
+</CardGroup>
+
+#### Key Advantages
+
+- Designers don't need to write code
+- Engineers directly see working prototypes
+- Reduces communication costs between design and development
+- Quickly verify interaction logic
+
+**Time savings: 2-3x faster execution**
+
+### Scenario 2: Quick Visual Adjustments
+
+**Real Case:** The design team no longer writes design documents and implements visual changes directly through AI Code.
+
+#### How to do it in HappyCapy
+
+Provide precise visual specifications:
+
+```
+Help me adjust the visual style of the login page:
+
+File: src/pages/Login.tsx
+
+Change requirements:
+- Change primary color from blue (#3B82F6) to purple (#8B5CF6)
+- Change the title font from 'Inter' to 'Poppins', weight 600
+- Change input height from 40px to 48px
+- Change button border radius from 4px to 8px
+- Increase overall spacing by 20% for a more breathable layout
+
+Keep existing functionality unchanged; style updates only.
+```
+
+#### What HappyCapy Will Do
+
+1. Precise modification of CSS/Tailwind classes
+2. Keep all functional logic intact
+3. Automatically run the frontend and generate a preview
+4. You can see the effect immediately and submit when satisfied
+
+#### Workflow Changes
+
+<Columns cols={2}>
+  <div>
+    **Old Process:**
+
+    1. Write design documents
+    2. Engineers understand requirements
+    3. Implement changes
+    4. Designer reviews
+    5. Request modifications
+    6. Repeat
+  </div>
+  <div>
+    **New Process:**
+
+    1. Designer implements directly
+    2. Preview results
+    3. Complete
+  </div>
+</Columns>
+
+## Advice for Product Designers
+
+### 1. Ask Engineers to Help with Initial Setup
+
+For the best experience, get initial help with:
+
+- Git permission configuration
+- Development environment settings
+
+<Tip>
+  Once configured, you'll have a revolutionary workflow that allows you to implement designs directly without waiting for engineering resources.
+</Tip>
+
+### 2. Communicate Your Design Background
+
+At the start of your conversation, set context:
+
+```
+Remember this: I'm a designer with limited programming
+experience who needs detailed explanations and smaller
+incremental changes.
+```
+
+HappyCapy will adjust communication methods to be more friendly and provide step-by-step guidance.
+
+### 3. Make Extensive Use of Picture Paste
+
+<Note>
+  **Cmd+V / Ctrl+V** to paste screenshots directly. HappyCapy is excellent at "reading pictures" to generate code - this is 10x faster than describing an interface with text.
+</Note>
+
+### 4. Start with Simple Tasks
+
+Build confidence step by step:
+
+<AccordionGroup>
+  <Accordion icon="palette" title="First Try: Change Button Color">
+    ```
+    Change the primary button color from #3B82F6 to #10B981
+    ```
+  </Accordion>
+
+  <Accordion icon="layout" title="Then Try: Adjust Page Layout">
+    ```
+    Adjust the dashboard layout to use a 3-column grid
+    instead of 2 columns
+    ```
+  </Accordion>
+
+  <Accordion icon="cube" title="Finally Try: Complex Interactions">
+    ```
+    Add a multi-step form with progress indicator and
+    smooth transitions between steps
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Real-World Examples
+
+### Example 1: Component Variations
+
+```
+I need to create 3 variations of this card component:
+
+[Paste screenshot of base card]
+
+Variations:
+1. Default state - subtle shadow, no border
+2. Hover state - elevated shadow, scale 1.02
+3. Active/Selected state - blue border, blue accent
+
+Generate the React component with all three states.
+```
+
+### Example 2: Responsive Design Implementation
+
+```
+This is my desktop mockup for the hero section:
+
+[Paste desktop mockup]
+
+Please implement this with responsive behavior:
+- Desktop (1440px+): 2-column layout, image on right
+- Tablet (768px-1439px): 2-column layout, smaller images
+- Mobile (< 768px): single column, image above text
+
+Use Tailwind CSS responsive utilities.
+```
+
+### Example 3: Interactive Animation
+
+```
+Add micro-interactions to this button component:
+
+[Paste button mockup]
+
+Animations needed:
+- Hover: Slight scale up (1.05) with 200ms ease
+- Click: Quick scale down (0.95) then back
+- Loading state: Pulse animation on the button
+- Success: Green checkmark fade-in animation
+
+Keep it subtle and professional.
+```
+
+### Example 4: Design System Components
+
+```
+Create a reusable Alert component based on this design:
+
+[Paste alert mockup]
+
+Requirements:
+- Support 4 types: info, success, warning, error
+- Each type has appropriate icon and color scheme
+- Dismissible with X button
+- Optional title and description
+- Smooth fade-out animation when dismissed
+
+Generate as a TypeScript React component with props interface.
+```
+
+## Design Workflow Integration
+
+### Figma to Code
+
+<AccordionGroup>
+  <Accordion icon="figma" title="Step 1: Design in Figma">
+    Create your designs with proper naming and organization
+  </Accordion>
+
+  <Accordion icon="image" title="Step 2: Export Frames">
+    Export specific frames or take screenshots of designs
+  </Accordion>
+
+  <Accordion icon="paste" title="Step 3: Paste into HappyCapy">
+    Paste screenshots and describe any interactions
+  </Accordion>
+
+  <Accordion icon="code" title="Step 4: Review Generated Code">
+    Check the generated components and request refinements
+  </Accordion>
+
+  <Accordion icon="check" title="Step 5: Test in Browser">
+    Preview the live version and iterate as needed
+  </Accordion>
+</AccordionGroup>
+
+### Collaborative Design Reviews
+
+Use HappyCapy to quickly implement feedback from design reviews:
+
+```
+Based on the design review feedback:
+
+1. Change the card shadow to be more subtle (reduce opacity by 50%)
+2. Increase font size of body text from 14px to 16px
+3. Add more whitespace between sections (increase gap from 16px to 24px)
+4. Change the CTA button from green to brand purple
+5. Make the header sticky when scrolling
+
+File: src/components/ProductCard.tsx
+```
+
+### Design QA
+
+Verify your implementation matches the design:
+
+```
+Compare this live page to my design mockup:
+
+[Paste design mockup]
+[Paste screenshot of implemented page]
+
+Please identify:
+1. Color differences
+2. Spacing/padding inconsistencies
+3. Typography mismatches
+4. Missing design details
+5. Suggest fixes for any discrepancies
+```
+
+## Advanced Techniques
+
+### Design Tokens Integration
+
+```
+I have a design tokens file (design-tokens.json).
+
+Please update all components in src/components/ui/ to use
+these tokens instead of hard-coded values:
+
+- Colors: Use tokens from colors.primary, colors.secondary
+- Spacing: Use spacing.sm, spacing.md, spacing.lg
+- Typography: Use typography.heading, typography.body
+
+Maintain all functionality while switching to token-based styling.
+```
+
+### Component Library Creation
+
+```
+Help me create a component library for our design system:
+
+Components needed:
+- Button (primary, secondary, ghost, danger variants)
+- Input (text, email, password with validation states)
+- Card (with header, body, footer sections)
+- Modal (with overlay, close button, customizable content)
+- Toast notifications (success, error, warning, info)
+
+Use TypeScript and Tailwind CSS. Each component should
+be in its own file with proper props documentation.
+```
+
+### Accessibility Improvements
+
+```
+Review this component for accessibility issues:
+
+File: src/components/LoginForm.tsx
+
+Please check and fix:
+1. Proper ARIA labels for form inputs
+2. Keyboard navigation support
+3. Focus indicators
+4. Color contrast ratios (WCAG AA compliance)
+5. Screen reader compatibility
+
+Implement fixes and explain what was changed.
+```
+
+## Tips for Effective Design Implementation
+
+### Be Specific About Visual Details
+
+<Columns cols={2}>
+  <div>
+    **Vague:**
+    ```
+    Make it look better
+    ```
+  </div>
+  <div>
+    **Specific:**
+    ```
+    Increase letter-spacing to 0.05em,
+    change font weight to 600,
+    add subtle drop shadow (0 2px 4px rgba(0,0,0,0.1))
+    ```
+  </div>
+</Columns>
+
+### Use Design Terminology
+
+HappyCapy understands design terminology:
+
+- Kerning, leading, tracking
+- Hue, saturation, luminosity
+- Padding, margin, gap
+- Aspect ratio, object-fit
+- Bezier curves, easing functions
+
+### Reference Design Patterns
+
+```
+Implement a card layout similar to Airbnb's listing cards:
+- Image with rounded corners
+- Overlay with quick actions
+- Title, rating, and price
+- Subtle hover effect with elevation
+```
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card title="General Best Practices" icon="lightbulb" href="/best-practices/general">
+    Learn universal tips that apply to all users
+  </Card>
+
+  <Card title="Developers Guide" icon="code" href="/best-practices/developers">
+    Understand how to collaborate with engineering
+  </Card>
+
+  <Card title="Marketing Guide" icon="megaphone" href="/best-practices/marketing">
+    Learn to create marketing materials
+  </Card>
+</CardGroup>
