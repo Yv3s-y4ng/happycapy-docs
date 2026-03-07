@@ -80,7 +80,7 @@
             "groups": [
               {
                 "group": "Use Cases",
-                "pages": ["use-cases/index", "use-cases/skills-directory"]
+                "pages": ["use-cases/index", "use-cases/skills-directory", "use-cases/discord-bot-business"]
               }
             ]
           }
@@ -146,7 +146,7 @@
             "groups": [
               {
                 "group": "用户案例",
-                "pages": ["zh/use-cases/index", "zh/use-cases/skills-directory"]
+                "pages": ["zh/use-cases/index", "zh/use-cases/skills-directory", "zh/use-cases/discord-bot-business"]
               }
             ]
           }
@@ -212,7 +212,7 @@
             "groups": [
               {
                 "group": "使用案例",
-                "pages": ["zh-Hant/use-cases/index", "zh-Hant/use-cases/skills-directory"]
+                "pages": ["zh-Hant/use-cases/index", "zh-Hant/use-cases/skills-directory", "zh-Hant/use-cases/discord-bot-business"]
               }
             ]
           }
