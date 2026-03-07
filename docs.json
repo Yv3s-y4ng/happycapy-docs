@@ -80,7 +80,7 @@
             "groups": [
               {
                 "group": "Use Cases",
-                "pages": ["use-cases/index"]
+                "pages": ["use-cases/index", "use-cases/skills-directory"]
               }
             ]
           }
@@ -146,7 +146,7 @@
             "groups": [
               {
                 "group": "用户案例",
-                "pages": ["zh/use-cases/index"]
+                "pages": ["zh/use-cases/index", "zh/use-cases/skills-directory"]
               }
             ]
           }
@@ -212,7 +212,7 @@
             "groups": [
               {
                 "group": "使用案例",
-                "pages": ["zh-Hant/use-cases/index"]
+                "pages": ["zh-Hant/use-cases/index", "zh-Hant/use-cases/skills-directory"]
               }
             ]
           }
