@@ -19,74 +19,201 @@
     "dark": "/logo/dark.svg"
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Getting Started",
-        "groups": [
+        "language": "en",
+        "tabs": [
           {
-            "group": "Getting Started",
-            "pages": [
-              "index",
-              "getting-started/quickstart",
-              "getting-started/faq"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Feature Guides",
-        "groups": [
-          {
-            "group": "Feature Guides",
-            "pages": [
-              "guides/skills",
-              "guides/multi-agent",
-              "guides/mcp",
-              "guides/automations"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Best Practices",
-        "groups": [
-          {
-            "group": "Overview",
-            "pages": [
-              "best-practices/index",
-              "best-practices/general"
+            "tab": "Getting Started",
+            "groups": [
+              {
+                "group": "Getting Started",
+                "pages": ["index", "getting-started/quickstart", "getting-started/faq"]
+              }
             ]
           },
           {
-            "group": "By Role",
-            "pages": [
-              "best-practices/developers",
-              "best-practices/non-technical",
-              "best-practices/product-design",
-              "best-practices/marketing",
-              "best-practices/data-analysis",
-              "best-practices/research",
-              "best-practices/team-collaboration"
+            "tab": "Feature Guides",
+            "groups": [
+              {
+                "group": "Feature Guides",
+                "pages": ["guides/skills", "guides/multi-agent", "guides/mcp", "guides/automations"]
+              }
+            ]
+          },
+          {
+            "tab": "Best Practices",
+            "groups": [
+              {
+                "group": "Overview",
+                "pages": ["best-practices/index", "best-practices/general"]
+              },
+              {
+                "group": "By Role",
+                "pages": [
+                  "best-practices/developers",
+                  "best-practices/non-technical",
+                  "best-practices/product-design",
+                  "best-practices/marketing",
+                  "best-practices/data-analysis",
+                  "best-practices/research",
+                  "best-practices/team-collaboration"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Integrations",
+            "groups": [
+              {
+                "group": "Platform Integrations",
+                "pages": ["integrations/index", "integrations/github", "integrations/notion"]
+              },
+              {
+                "group": "Advanced",
+                "pages": ["integrations/vscode", "integrations/contact"]
+              }
+            ]
+          },
+          {
+            "tab": "Use Cases",
+            "groups": [
+              {
+                "group": "Use Cases",
+                "pages": ["use-cases/index"]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "Integrations",
-        "groups": [
+        "language": "zh",
+        "tabs": [
           {
-            "group": "Platform Integrations",
-            "pages": [
-              "integrations/index",
-              "integrations/github",
-              "integrations/notion"
+            "tab": "快速入门",
+            "groups": [
+              {
+                "group": "快速入门",
+                "pages": ["zh/index", "zh/getting-started/quickstart", "zh/getting-started/faq"]
+              }
             ]
           },
           {
-            "group": "Advanced",
-            "pages": [
-              "integrations/vscode",
-              "integrations/contact"
+            "tab": "功能指南",
+            "groups": [
+              {
+                "group": "功能指南",
+                "pages": ["zh/guides/skills", "zh/guides/multi-agent", "zh/guides/mcp", "zh/guides/automations"]
+              }
+            ]
+          },
+          {
+            "tab": "最佳实践",
+            "groups": [
+              {
+                "group": "概览",
+                "pages": ["zh/best-practices/index", "zh/best-practices/general"]
+              },
+              {
+                "group": "按角色",
+                "pages": [
+                  "zh/best-practices/developers",
+                  "zh/best-practices/non-technical",
+                  "zh/best-practices/product-design",
+                  "zh/best-practices/marketing",
+                  "zh/best-practices/data-analysis",
+                  "zh/best-practices/research",
+                  "zh/best-practices/team-collaboration"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "集成",
+            "groups": [
+              {
+                "group": "平台集成",
+                "pages": ["zh/integrations/index", "zh/integrations/github", "zh/integrations/notion"]
+              },
+              {
+                "group": "高级",
+                "pages": ["zh/integrations/vscode", "zh/integrations/contact"]
+              }
+            ]
+          },
+          {
+            "tab": "用户案例",
+            "groups": [
+              {
+                "group": "用户案例",
+                "pages": ["zh/use-cases/index"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "zh-Hant",
+        "tabs": [
+          {
+            "tab": "快速入門",
+            "groups": [
+              {
+                "group": "快速入門",
+                "pages": ["zh-Hant/index", "zh-Hant/getting-started/quickstart", "zh-Hant/getting-started/faq"]
+              }
+            ]
+          },
+          {
+            "tab": "功能指南",
+            "groups": [
+              {
+                "group": "功能指南",
+                "pages": ["zh-Hant/guides/skills", "zh-Hant/guides/multi-agent", "zh-Hant/guides/mcp", "zh-Hant/guides/automations"]
+              }
+            ]
+          },
+          {
+            "tab": "最佳實踐",
+            "groups": [
+              {
+                "group": "概覽",
+                "pages": ["zh-Hant/best-practices/index", "zh-Hant/best-practices/general"]
+              },
+              {
+                "group": "按角色",
+                "pages": [
+                  "zh-Hant/best-practices/developers",
+                  "zh-Hant/best-practices/non-technical",
+                  "zh-Hant/best-practices/product-design",
+                  "zh-Hant/best-practices/marketing",
+                  "zh-Hant/best-practices/data-analysis",
+                  "zh-Hant/best-practices/research",
+                  "zh-Hant/best-practices/team-collaboration"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "整合",
+            "groups": [
+              {
+                "group": "平台整合",
+                "pages": ["zh-Hant/integrations/index", "zh-Hant/integrations/github", "zh-Hant/integrations/notion"]
+              },
+              {
+                "group": "進階",
+                "pages": ["zh-Hant/integrations/vscode", "zh-Hant/integrations/contact"]
+              }
+            ]
+          },
+          {
+            "tab": "使用案例",
+            "groups": [
+              {
+                "group": "使用案例",
+                "pages": ["zh-Hant/use-cases/index"]
+              }
             ]
           }
         ]
