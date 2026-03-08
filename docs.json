@@ -67,7 +67,7 @@
             "groups": [
               {
                 "group": "Platform Integrations",
-                "pages": ["integrations/index", "integrations/github", "integrations/notion"]
+                "pages": ["integrations/index", "integrations/github", "integrations/notion", "integrations/qq-bot"]
               },
               {
                 "group": "Advanced",
@@ -133,7 +133,7 @@
             "groups": [
               {
                 "group": "平台集成",
-                "pages": ["zh/integrations/index", "zh/integrations/github", "zh/integrations/notion"]
+                "pages": ["zh/integrations/index", "zh/integrations/github", "zh/integrations/notion", "zh/integrations/qq-bot"]
               },
               {
                 "group": "高级",
@@ -199,7 +199,7 @@
             "groups": [
               {
                 "group": "平台整合",
-                "pages": ["zh-Hant/integrations/index", "zh-Hant/integrations/github", "zh-Hant/integrations/notion"]
+                "pages": ["zh-Hant/integrations/index", "zh-Hant/integrations/github", "zh-Hant/integrations/notion", "zh-Hant/integrations/qq-bot"]
               },
               {
                 "group": "進階",

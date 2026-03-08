@@ -1,0 +1,67 @@
+---
+title: "Connect QQ Bot"
+description: "Connect your HappyCapy to QQ in three steps — supports normal chat and emotional companion modes"
+---
+
+<Note>
+This feature is currently in beta. You can enable automation to keep the process running persistently.
+</Note>
+
+## Preview
+
+<img src="/images/integrations/qq-bot/demo-chat.jpg" alt="QQ Bot chat demo" style={{ borderRadius: '12px', marginBottom: '24px', maxWidth: '400px' }} />
+
+<img src="/images/integrations/qq-bot/demo-video.gif" alt="QQ Bot video demo" style={{ borderRadius: '12px', marginBottom: '24px', maxWidth: '400px' }} />
+
+## Setup Steps
+
+<Steps>
+  <Step title="Register a QQ Bot">
+    Go to [QQ Open Platform](https://q.qq.com) and register a bot account.
+
+    <img src="/images/integrations/qq-bot/step1-register.png" alt="Register QQ Bot" style={{ borderRadius: '8px', marginTop: '12px' }} />
+  </Step>
+
+  <Step title="Create a Bot Application">
+    Create a new bot application on the platform. Select the "Mini Program" type.
+
+    <img src="/images/integrations/qq-bot/step2-create-bot.png" alt="Create bot application" style={{ borderRadius: '8px', marginTop: '12px' }} />
+  </Step>
+
+  <Step title="Get Credentials and Take a Screenshot">
+    Find your **AppID** and **AppSecret** on the bot management page, then take a screenshot of that page.
+
+    <img src="/images/integrations/qq-bot/step3-credentials.png" alt="Get credentials" style={{ borderRadius: '8px', marginTop: '12px' }} />
+  </Step>
+
+  <Step title="Deploy in HappyCapy">
+    Open a new HappyCapy conversation and send the following prompt:
+
+    ```
+    安装这个 https://github.com/Yv3s-y4ng/qq-bridge 到本地并部署
+    ```
+
+    Then send your credentials screenshot to HappyCapy. It will automatically extract the AppID and AppSecret and complete the deployment.
+  </Step>
+</Steps>
+
+Once deployed, your QQ bot is live.
+
+## Two Modes
+
+<CardGroup cols={2}>
+  <Card title="Normal Chat Mode" icon="comments">
+    QQ messages are forwarded directly to Claude, and Claude's replies are sent back to QQ. It's like using HappyCapy right inside QQ.
+  </Card>
+
+  <Card title="Emotional Companion Mode" icon="heart">
+    Built-in AI characters (3 female + 3 male) with unique personalities, speech patterns, and emotional arcs. Supports AI-generated images and videos.
+  </Card>
+</CardGroup>
+
+## Commands
+
+| Command | Effect |
+|---------|--------|
+| `/mode` | Switch between normal chat and companion mode |
+| `/reset` | Reset all state and re-select mode |

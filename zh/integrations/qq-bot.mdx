@@ -1,0 +1,67 @@
+---
+title: "接入 QQ 机器人"
+description: "三步将你的 HappyCapy 接入 QQ，支持普通对话和情感陪伴两种模式"
+---
+
+<Note>
+此功能目前处于测试阶段，可开启自动化功能让进程常驻。
+</Note>
+
+## 效果预览
+
+<img src="/images/integrations/qq-bot/demo-chat.jpg" alt="QQ Bot 对话演示" style={{ borderRadius: '12px', marginBottom: '24px', maxWidth: '400px' }} />
+
+<img src="/images/integrations/qq-bot/demo-video.gif" alt="QQ Bot 视频演示" style={{ borderRadius: '12px', marginBottom: '24px', maxWidth: '400px' }} />
+
+## 接入步骤
+
+<Steps>
+  <Step title="注册 QQ 机器人">
+    前往 [QQ 开放平台](https://q.qq.com) 注册一个机器人账号。
+
+    <img src="/images/integrations/qq-bot/step1-register.png" alt="注册 QQ 机器人" style={{ borderRadius: '8px', marginTop: '12px' }} />
+  </Step>
+
+  <Step title="创建机器人应用">
+    在开放平台中创建一个新的机器人应用，选择「小程序」类型。
+
+    <img src="/images/integrations/qq-bot/step2-create-bot.png" alt="创建机器人应用" style={{ borderRadius: '8px', marginTop: '12px' }} />
+  </Step>
+
+  <Step title="获取凭证并截图">
+    在机器人管理页面找到 **AppID** 和 **AppSecret**，对该页面截图。
+
+    <img src="/images/integrations/qq-bot/step3-credentials.png" alt="获取凭证" style={{ borderRadius: '8px', marginTop: '12px' }} />
+  </Step>
+
+  <Step title="在 HappyCapy 中部署">
+    打开一个新的 HappyCapy 对话，发送以下 prompt：
+
+    ```
+    安装这个 https://github.com/Yv3s-y4ng/qq-bridge 到本地并部署
+    ```
+
+    然后把刚才的凭证截图发给 HappyCapy，它会自动识别 AppID 和 AppSecret 并完成部署。
+  </Step>
+</Steps>
+
+部署完成后，你的 QQ 机器人就上线了。
+
+## 两种模式
+
+<CardGroup cols={2}>
+  <Card title="普通对话模式" icon="comments">
+    QQ 消息直接转发给 Claude，Claude 的回复自动发回 QQ。相当于在 QQ 里直接使用 HappyCapy。
+  </Card>
+
+  <Card title="情感陪伴模式" icon="heart">
+    内置多个 AI 角色（3 女 3 男），有独立的人格、说话风格和情感弧线。支持 AI 生成图片和视频。
+  </Card>
+</CardGroup>
+
+## 常用命令
+
+| 命令 | 作用 |
+|------|------|
+| `/mode` | 切换普通对话模式和情感陪伴模式 |
+| `/reset` | 重置所有状态，重新选择模式 |
