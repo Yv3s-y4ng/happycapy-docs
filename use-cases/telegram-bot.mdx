@@ -1,31 +1,31 @@
 ---
 title: "From Intern to Open-Source — Building a 24/7 Telegram Bot Skill"
-description: "How a HappyCapy intern built an open-source Telegram Bot skill with 4-layer fault tolerance, AI conversations, and one-command deployment"
+description: "How a happycapy intern built an open-source Telegram Bot skill with 4-layer fault tolerance, AI conversations, and one-command deployment"
 ---
 
 <img src="/images/use-cases/telegram-bot-repo.png" alt="Telegram Bot Skill GitHub repository" style={{ borderRadius: '12px', marginBottom: '24px' }} />
 
 ## Background
 
-**User**: Kita / 喜多 (HappyCapy intern, [Lucky-Dog07](https://github.com/Lucky-Dog07))
+**User**: Kita / 喜多 (happycapy intern, [Lucky-Dog07](https://github.com/Lucky-Dog07))
 
-Kita is a HappyCapy intern who was inspired by gffi's Discord Bot article. She decided to build a similar solution for Telegram — but went further by engineering a 4-layer fault tolerance system and open-sourcing everything as an installable HappyCapy skill.
+Kita is a happycapy intern who was inspired by gffi's Discord Bot article. She decided to build a similar solution for Telegram — but went further by engineering a 4-layer fault tolerance system and open-sourcing everything as an installable happycapy skill.
 
-> "The predecessor of this project is gffi's 'Building a 24/7 Discord Bot in HappyCapy Sandbox'. The Telegram Bot began by referencing that structure and evolved its own architecture."
+> "The predecessor of this project is gffi's 'Building a 24/7 Discord Bot in happycapy Sandbox'. The Telegram Bot began by referencing that structure and evolved its own architecture."
 > — Kita
 
 ## What She Built
 
 ### A 24/7 Telegram Bot Skill
 
-An open-source, one-command-setup Telegram bot that runs on HappyCapy's sandbox with AI-powered conversations, image analysis, and persistent memory.
+An open-source, one-command-setup Telegram bot that runs on happycapy's sandbox with AI-powered conversations, image analysis, and persistent memory.
 
 <Card
   title="View on GitHub"
   icon="github"
   href="https://github.com/Lucky-Dog07/telegram-bot-skill"
 >
-  telegram-bot-skill — 7x24 AI-powered Telegram Bot for HappyCapy
+  telegram-bot-skill — 7x24 AI-powered Telegram Bot for happycapy
 </Card>
 
 ### Key Technical Difference from Discord
@@ -38,7 +38,7 @@ The bot features a robust 4-layer recovery system, evolved from gffi's 3-layer d
 
 <Steps>
   <Step title="Auto-Recovery Boot Layer">
-    Uses `.zshenv` to trigger `start-bot.sh` on every sandbox session start — because `.bashrc` doesn't work in HappyCapy's zsh environment
+    Uses `.zshenv` to trigger `start-bot.sh` on every sandbox session start — because `.bashrc` doesn't work in happycapy's zsh environment
   </Step>
 
   <Step title="Layer 1: Supervisord">
@@ -62,7 +62,7 @@ Plus two independent systems:
 
 <CardGroup cols={2}>
   <Card title="AI Conversations" icon="robot">
-    Claude-powered chat through HappyCapy's AI Gateway — supports multiple models
+    Claude-powered chat through happycapy's AI Gateway — supports multiple models
   </Card>
 
   <Card title="Image Analysis" icon="image">
@@ -82,7 +82,7 @@ Plus two independent systems:
 
 Kita's article documents the real debugging process — not just the final solution:
 
-- **`.bashrc` doesn't work**: HappyCapy uses zsh, not bash — had to switch to `.zshenv`
+- **`.bashrc` doesn't work**: happycapy uses zsh, not bash — had to switch to `.zshenv`
 - **Supervisord config resets**: `/etc/supervisord.conf` is not persistent across reboots — solved with dynamic config generation
 - **Long polling conflicts**: Telegram rejects multiple polling connections — required careful process management
 - **No cron available**: Had to implement custom scheduled tasks using shell loops
@@ -90,7 +90,7 @@ Kita's article documents the real debugging process — not just the final solut
 
 ## An Honest Take
 
-What makes Kita's write-up stand out is its honesty. She openly states that true 24/7 uptime hasn't been fully achieved — the bot only auto-restarts when a user opens a HappyCapy session, not independently. This kind of transparency is valuable for the community.
+What makes Kita's write-up stand out is its honesty. She openly states that true 24/7 uptime hasn't been fully achieved — the bot only auto-restarts when a user opens a happycapy session, not independently. This kind of transparency is valuable for the community.
 
 > "Honestly, 7x24 is not yet fully achieved. But the architecture is solid and the auto-recovery works reliably within session scope."
 
@@ -98,7 +98,7 @@ What makes Kita's write-up stand out is its honesty. She openly states that true
 
 <CardGroup cols={2}>
   <Card title="Open Source First" icon="code-branch">
-    Built as an installable HappyCapy skill — anyone can deploy their own Telegram bot with one command
+    Built as an installable happycapy skill — anyone can deploy their own Telegram bot with one command
   </Card>
 
   <Card title="Zero Dependencies" icon="feather">
@@ -115,5 +115,5 @@ What makes Kita's write-up stand out is its honesty. She openly states that true
 </CardGroup>
 
 <Tip>
-Kita's project shows the power of HappyCapy's community: one user's blog post (gffi's Discord Bot) inspired an intern to build an improved, open-source version for a different platform. This is how community knowledge compounds — each contribution raises the bar for the next.
+Kita's project shows the power of happycapy's community: one user's blog post (gffi's Discord Bot) inspired an intern to build an improved, open-source version for a different platform. This is how community knowledge compounds — each contribution raises the bar for the next.
 </Tip>

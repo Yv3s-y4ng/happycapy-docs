@@ -37,7 +37,7 @@ MCP(Model Context Protocol,模型上下文协议)是一个开放的协议标准,
 
 ## 为什么需要 MCP?
 
-在 HappyCapy 中安装 MCP 后,你可以:
+在 happycapy 中安装 MCP 后,你可以:
 
 ### 自动化日常工作
 让 AI 帮你处理邮件、安排日程、整理文档
@@ -53,11 +53,11 @@ MCP(Model Context Protocol,模型上下文协议)是一个开放的协议标准,
 
 ## 快速安装:使用我们的自动化技能
 
-我们为 HappyCapy 开发了一个一键安装 MCP 的技能,可以自动帮你配置 Memory MCP、Composio MCP 和 GitHub Copilot MCP。
+我们为 happycapy 开发了一个一键安装 MCP 的技能,可以自动帮你配置 Memory MCP、Composio MCP 和 GitHub Copilot MCP。
 
 <Steps>
   <Step title="安装技能">
-    在 HappyCapy 对话中输入:
+    在 happycapy 对话中输入:
     ```
     安装技能: https://github.com/Y1fe1-Yang/happycapy-mcp-manager
     ```
@@ -144,18 +144,18 @@ Memory MCP 是一个官方的知识图谱存储 MCP,能为 AI 提供持久化的
 </AccordionGroup>
 
 <Note>
-复制上述任意一个代码块中的 Prompt,直接粘贴到对话框即可开始使用。HappyCapy 会自动扫描历史 sessions 并将信息整合到 Memory MCP 知识图谱中。
+复制上述任意一个代码块中的 Prompt,直接粘贴到对话框即可开始使用。happycapy 会自动扫描历史 sessions 并将信息整合到 Memory MCP 知识图谱中。
 
-**重要**: 安装 Memory 之后的对话将自动保存,无需重复此命令。该服务于沙箱内自行完成——HappyCapy 不会使用任何您的信息。
+**重要**: 安装 Memory 之后的对话将自动保存,无需重复此命令。该服务于沙箱内自行完成——happycapy 不会使用任何您的信息。
 </Note>
 
 ## 与 GitHub 集成
 
-连接 GitHub 后,HappyCapy 可以帮你管理代码仓库、创建和查看 Issues、处理 Pull Requests、查看 CI/CD 状态等。
+连接 GitHub 后,happycapy 可以帮你管理代码仓库、创建和查看 Issues、处理 Pull Requests、查看 CI/CD 状态等。
 
 ### 获取 GitHub Token
 
-Token 就像一把钥匙,允许 HappyCapy 代表你操作 GitHub。
+Token 就像一把钥匙,允许 happycapy 代表你操作 GitHub。
 
 <Steps>
   <Step title="打开 GitHub Token 设置">
@@ -166,7 +166,7 @@ Token 就像一把钥匙,允许 HappyCapy 代表你操作 GitHub。
 
   <Step title="生成新 Token">
     - 点击 **"Generate new token"** → 选择 **"Generate new token (classic)"**
-    - 填写 **Note**(备注),如 "HappyCapy"
+    - 填写 **Note**(备注),如 "happycapy"
     - Expiration 选择 **"No expiration"**(推荐)
     - 选择 scopes/权限
   </Step>
@@ -211,7 +211,7 @@ Token 就像一把钥匙,允许 HappyCapy 代表你操作 GitHub。
     Token: ghp_your_token
     ```
 
-    HappyCapy 会:
+    happycapy 会:
     - 整理对话
     - 生成合适的文件结构
     - 提交代码到 GitHub
@@ -247,12 +247,12 @@ Token 就像一把钥匙,允许 HappyCapy 代表你操作 GitHub。
 </AccordionGroup>
 
 <Tip>
-**Token 只需提供一次**: 在同一对话中,第一次提供 Token 后,后续操作无需再次提供。HappyCapy 会记住你的 Token。
+**Token 只需提供一次**: 在同一对话中,第一次提供 Token 后,后续操作无需再次提供。happycapy 会记住你的 Token。
 </Tip>
 
 ## 与 Notion 集成
 
-连接 Notion 后,HappyCapy 可以帮你读取、编辑、创建 Notion 页面,自动整理笔记,生成文档等。
+连接 Notion 后,happycapy 可以帮你读取、编辑、创建 Notion 页面,自动整理笔记,生成文档等。
 
 ### 获取 Notion Token
 
@@ -264,7 +264,7 @@ Token 就像一把钥匙,允许 HappyCapy 代表你操作 GitHub。
   </Step>
 
   <Step title="填写 Integration 信息">
-    - **Name**: 随便写,如 "HappyCapy"
+    - **Name**: 随便写,如 "happycapy"
     - **Associated workspace**: 选择你的工作区
     - **Capabilities**: 默认即可(Read content, Update content, Insert content)
   </Step>
@@ -284,11 +284,11 @@ Token 就像一把钥匙,允许 HappyCapy 代表你操作 GitHub。
 
 <Steps>
   <Step title="打开你的 Notion 页面">
-    打开你想让 HappyCapy 访问的页面
+    打开你想让 happycapy 访问的页面
   </Step>
 
   <Step title="添加连接">
-    点击右上角 **"···"** 按钮 → 选择 **"Connections"** → 找到你的 Integration(如 "HappyCapy")
+    点击右上角 **"···"** 按钮 → 选择 **"Connections"** → 找到你的 Integration(如 "happycapy")
   </Step>
 
   <Step title="确认授权">
@@ -297,7 +297,7 @@ Token 就像一把钥匙,允许 HappyCapy 代表你操作 GitHub。
 </Steps>
 
 <Note>
-每个你想让 HappyCapy 访问的页面都需要单独授权。如果页面有子页面,子页面会继承权限。
+每个你想让 happycapy 访问的页面都需要单独授权。如果页面有子页面,子页面会继承权限。
 </Note>
 
 ### 获取页面 ID
@@ -318,7 +318,7 @@ https://www.notion.so/My-Page-3065ab5584b5803e8572fcb253106e5a
 3065ab5584b5803e8572fcb253106e5a
 ```
 
-### 在 HappyCapy 中使用
+### 在 happycapy 中使用
 
 ```
 读取我的 Notion 页面

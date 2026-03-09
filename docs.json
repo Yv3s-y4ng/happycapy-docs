@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "maple",
-  "name": "HappyCapy",
+  "name": "happycapy",
   "colors": {
     "primary": "#F8A963",
     "light": "#fcfbf8",
@@ -19,6 +19,28 @@
     "dark": "/logo/dark.svg"
   },
   "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Join Discord",
+          "icon": "discord",
+          "iconType": "brands",
+          "href": "https://discord.gg/N3vdDbvsF8"
+        },
+        {
+          "anchor": "Follow on X",
+          "icon": "x-twitter",
+          "iconType": "brands",
+          "href": "https://x.com/happycapyai"
+        },
+        {
+          "anchor": "YouTube",
+          "icon": "youtube",
+          "iconType": "brands",
+          "href": "https://www.youtube.com/@happycapyai"
+        }
+      ]
+    },
     "languages": [
       {
         "language": "en",
@@ -133,7 +155,9 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/happycapy",
+      "x": "https://x.com/happycapyai",
+      "discord": "https://discord.gg/N3vdDbvsF8",
+      "youtube": "https://www.youtube.com/@happycapyai",
       "github": "https://github.com/Yv3s-y4ng"
     }
   }
