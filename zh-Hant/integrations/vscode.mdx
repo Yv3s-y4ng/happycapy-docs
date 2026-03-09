@@ -1,6 +1,6 @@
 ---
-title: "將 VS Code 連接到 Happycapy 沙箱"
-description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
+title: "將 VS Code 連接到 HappyCapy 沙箱"
+description: "使用本地 VS Code IDE 連接 HappyCapy 雲端沙箱"
 ---
 
 ## 適用場景
@@ -12,14 +12,14 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
 - 需要特定的付費擴充或企業工具
 - 習慣本地 IDE 的快捷鍵與工作流程
 
-好消息：透過 **VS Code Remote Tunnels**，可以輕鬆連接到 Happycapy 雲端沙箱！
+好消息：透過 **VS Code Remote Tunnels**，可以輕鬆連接到 HappyCapy 雲端沙箱！
 
 ## 準備工作
 
 開始之前，請確保你有：
 
 <CardGroup cols={2}>
-  <Card title="Happycapy 帳號" icon="user">
+  <Card title="HappyCapy 帳號" icon="user">
     訪問 [happycapy.ai](https://happycapy.ai/) 註冊
   </Card>
   <Card title="VS Code 1.70+" icon="code">
@@ -36,14 +36,14 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
 ## 3 步完成連接
 
 <Steps>
-  <Step title="在 Happycapy 啟動 Tunnel">
-    在 Happycapy 對話框中輸入：
+  <Step title="在 HappyCapy 啟動 Tunnel">
+    在 HappyCapy 對話框中輸入：
 
     ```
-    請幫我啟動 VSCode Remote Tunnel（全局模式）--name Happycapy，並展示 GitHub 認證連結與驗證碼
+    請幫我啟動 VSCode Remote Tunnel（全局模式）--name HappyCapy，並展示 GitHub 認證連結與驗證碼
     ```
 
-    Happycapy 會自動安裝並啟動 Tunnel，然後回傳：
+    HappyCapy 會自動安裝並啟動 Tunnel，然後回傳：
 
     <Note>
     **記下這兩個資訊：**
@@ -56,7 +56,7 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
     在瀏覽器中完成授權（約 1 分鐘）：
 
     1. 開啟 [https://github.com/login/device](https://github.com/login/device)
-    2. 輸入 Happycapy 提供的授權碼
+    2. 輸入 HappyCapy 提供的授權碼
     3. 點擊 **Authorize**
 
     <Tip>
@@ -76,11 +76,11 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
       1. 按 `F1` 開啟命令面板
       2. 輸入：`Remote-Tunnels: Connect to Tunnel`
       3. 登入 GitHub（首次需要）
-      4. 選擇 `Happycapy`
+      4. 選擇 `HappyCapy`
       5. 等待連接建立
 
       <Tip>
-      成功標誌：左下角顯示綠色 `>< Remote [Happycapy]`
+      成功標誌：左下角顯示綠色 `>< Remote [HappyCapy]`
       </Tip>
     </Accordion>
   </Step>
@@ -88,7 +88,7 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
 
 ## 開始使用
 
-連接成功後，你可以像在本地一樣使用 Happycapy 沙箱：
+連接成功後，你可以像在本地一樣使用 HappyCapy 沙箱：
 
 ### 打開遠端資料夾
 
@@ -118,11 +118,11 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
 
 ## 快速參考
 
-### Happycapy Prompt 速查
+### HappyCapy Prompt 速查
 
 | 操作 | Prompt |
 |------|--------|
-| 啟動 Tunnel | `請幫我啟動 VSCode Remote Tunnel（全局模式）--name Happycapy，並展示 GitHub 認證連結與驗證碼` |
+| 啟動 Tunnel | `請幫我啟動 VSCode Remote Tunnel（全局模式）--name HappyCapy，並展示 GitHub 認證連結與驗證碼` |
 | 檢查狀態 | `VSCode Tunnel 還在運行嗎？` |
 | 停止服務 | `請停止 VSCode Tunnel 服務` |
 | 重新啟動 | `請重新啟動 VSCode Tunnel` |
@@ -141,7 +141,7 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
 
 <AccordionGroup>
   <Accordion title="找不到我的 tunnel？">
-    1. 在 Happycapy 中問：「VSCode Tunnel 還在運行嗎？」
+    1. 在 HappyCapy 中問：「VSCode Tunnel 還在運行嗎？」
     2. 如果沒有運行，重新執行啟動 prompt
     3. 檢查本地網路連線
     4. 重新登入 GitHub：
@@ -153,7 +153,7 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
     嘗試以下步驟：
     1. 檢查網路連線
     2. 暫時關閉 VPN（如果正在使用）
-    3. 在 Happycapy 中重啟 Tunnel
+    3. 在 HappyCapy 中重啟 Tunnel
     4. 更新 VS Code 到最新版本
   </Accordion>
 
@@ -166,7 +166,7 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
   <Accordion title="擴充無法運作">
     某些擴充需要安裝在遠端伺服器上：
     1. 開啟擴充面板 (`Ctrl + Shift + X`)
-    2. 尋找有「Install in SSH: Happycapy」按鈕的擴充
+    2. 尋找有「Install in SSH: HappyCapy」按鈕的擴充
     3. 點擊安裝到遠端伺服器
   </Accordion>
 </AccordionGroup>
@@ -175,7 +175,7 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
 
 <CardGroup cols={2}>
   <Card title="日常快速工作" icon="bolt">
-    使用 Happycapy 網頁界面進行快速任務和對話
+    使用 HappyCapy 網頁界面進行快速任務和對話
   </Card>
   <Card title="複雜專案" icon="diagram-project">
     切換到本地 VS Code 進行大規模開發和重構
@@ -188,7 +188,7 @@ description: "使用本地 VS Code IDE 連接 Happycapy 雲端沙箱"
 
 ## 你已經準備好了！
 
-現在你已經掌握了將本地 VS Code 連接到 Happycapy 雲端沙箱的完整流程。享受你的雲端開發之旅吧！
+現在你已經掌握了將本地 VS Code 連接到 HappyCapy 雲端沙箱的完整流程。享受你的雲端開發之旅吧！
 
 <Card
   title="需要更多幫助？"
