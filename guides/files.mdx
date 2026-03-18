@@ -43,7 +43,7 @@ Use the **+** button in the chat input to upload files from your computer direct
 
 ## Advanced: configuring your project workspace
 
-Every Desktop has a dedicated project directory at `~/a0/workspace/<desktop-id>/`. All sessions within that Desktop share this directory. Every file in it is editable — you can navigate there in Files and modify anything directly.
+Every Desktop has a dedicated project directory at `/home/node/a0/workspace/<desktop-id>/`. All sessions within that Desktop share this directory. Every file in it is editable — you can navigate there in Files and modify anything directly.
 
 This gives you full control over how Claude behaves in a Desktop. A well-structured project workspace looks like this:
 
@@ -74,4 +74,14 @@ your-project/
 
 **`.claude/hooks/`** contains automation scripts that run on triggers — for example, running tests after every code edit.
 
-Your conversation history is stored separately at `~/.claude/projects/`, organized by Desktop, as `.jsonl` files.
+Your conversation history is stored separately at `/home/node/.claude/projects/`, organized by Desktop, as `.jsonl` files.
+
+<Tip>
+  If a session behaves unexpectedly, you can inspect its log. Copy the session ID from the URL — the UUID after `/s/` — then open a new session and say:
+
+  ```
+  Find the JSONL log for session <id> under /home/node/.claude/projects/, back it up, diagnose what went wrong, fix it, and resume the conversation.
+  ```
+
+  Claude will locate the file, back it up, read through the conversation history, fix the issue, and pick up where the session left off.
+</Tip>
