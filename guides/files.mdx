@@ -80,8 +80,8 @@ Your conversation history is stored separately at `/home/node/.claude/projects/`
   If a session behaves unexpectedly, you can inspect its log. Copy the session ID from the URL — the UUID after `/s/` — then open a new session and say:
 
   ```
-  Find the JSONL log for session <id> under /home/node/.claude/projects/ and help me figure out what went wrong.
+  Find the JSONL log for session <id> under /home/node/.claude/projects/, back it up, diagnose what went wrong, fix it, and resume the conversation.
   ```
 
-  Claude will locate the file, read through the conversation history, and diagnose the issue.
+  Claude will locate the file, back it up, read through the conversation history, fix the issue, and pick up where the session left off.
 </Tip>
