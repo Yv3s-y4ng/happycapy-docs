@@ -1,0 +1,54 @@
+---
+title: "Capy Mail"
+description: "Use your personal Capymail address to trigger tasks by email"
+---
+
+## What Capy Mail is
+
+Every Happycapy account gets a dedicated email address at `capymail.ai`. Send an email to that address and Happycapy runs it as a task — no need to open the app.
+
+This turns your inbox into a trigger for anything Happycapy can do. Forward a customer inquiry and have it drafted into a response. Send yourself a note and have it organized into a Notion page. Email a link and have it summarized.
+
+## Finding your address
+
+Go to **Settings → Capy Mail**. Your address is listed at the top — something like `your_username@capymail.ai`.
+
+## Allowed Senders
+
+Capy Mail only processes emails from addresses on your whitelist. You can add up to 4 allowed senders.
+
+To add one:
+1. Open **Settings → Capy Mail**
+2. Type an email address into the "Add email address" field
+3. Click the **+** button
+
+Remove a sender at any time by clicking the delete button next to their address.
+
+<Warning>
+  Emails from addresses not on your Allowed Senders list are ignored. Make sure to add the email addresses you'll be sending from before you try using Capy Mail.
+</Warning>
+
+## What to put in the email
+
+Write your task in the email body the same way you'd type it in the chat. Capy Mail passes the subject and body to Happycapy as the task prompt.
+
+Examples:
+
+```
+Subject: Daily briefing
+Body: Fetch the top 5 AI news stories from today and send me a summary
+```
+
+```
+Subject: Notion update
+Body: Add the following to my project notes page [paste content]
+Token: ntn_your_notion_token
+```
+
+## Pairing with Automations
+
+Capy Mail works well alongside Automations. Set up an automation with an email trigger — when a specific sender emails a specific subject, run a specific Skill. This lets you build reliable, repeatable workflows without opening Happycapy at all.
+
+<Tip>
+  A simple way to get started: add your own email address as an allowed sender, then email your Capymail address whenever a task comes to mind. It acts like a smart to-do inbox.
+</Tip>

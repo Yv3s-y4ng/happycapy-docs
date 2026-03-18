@@ -1,0 +1,47 @@
+---
+title: "Credits & Usage"
+description: "Track your credit consumption and understand how different models and tasks affect your usage"
+---
+
+## Where to find your usage
+
+Click **Usage** in the left sidebar. You'll see two numbers at the top: total credits consumed and total requests made, for the selected time range.
+
+Use the **7 Days / 30 Days / 90 Days** buttons in the top right to switch between time ranges.
+
+## Reading the charts
+
+**Credits by Model** shows a stacked bar chart of credit consumption per day, broken down by model. Taller bars on a given day mean more activity. The color legend shows which models drove that usage — Claude models, image generation models, and video generation models each appear in different colors.
+
+**Requests by Model** shows the same breakdown by request count rather than credit cost. A model can appear frequently in Requests but minimally in Credits if it's cheap to run (like Haiku), or the reverse if it's expensive (like Opus).
+
+## How credits work
+
+Different models and task types consume credits at different rates:
+
+- **Opus 4.6** consumes the most credits per request — it's the most capable model and best for complex reasoning tasks
+- **Sonnet 4.6** is the default and strikes a balance between capability and cost
+- **Haiku 4.5** is the cheapest option for quick, simple answers
+- **MiniMax M2.5 / M2.7** are cost-efficient options for everyday tasks
+- **Image and video generation** (Gemini, Seedream, etc.) consume credits separately from text — check the chart to see how much media generation contributes to your usage
+
+## Choosing the right model
+
+The model selector sits in the bottom-right of every chat input. Pick based on what you need:
+
+| Task | Recommended model |
+|------|------------------|
+| Complex analysis, coding, reasoning | Opus 4.6 |
+| Most everyday tasks | Sonnet 4.6 |
+| Quick questions, simple edits | Haiku 4.5 |
+| Cost-sensitive tasks at scale | MiniMax M2.7 |
+
+Happycapy also selects models automatically when you use Skills — image generation tasks route to image models, video tasks to video models.
+
+## Max plan
+
+Max plan users have unlimited tokens. The Usage dashboard still shows your consumption for reference, but there's no cap and no anxiety about running out mid-task.
+
+<Tip>
+  If you're watching your credits, run complex multi-step tasks on Sonnet rather than Opus unless you specifically need Opus's reasoning depth. For research tasks that involve lots of back-and-forth, Haiku handles the lightweight steps well.
+</Tip>

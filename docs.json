@@ -47,11 +47,11 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["index", "getting-started/quickstart", "getting-started/faq"]
+            "pages": ["index", "getting-started/quickstart", "getting-started/credits", "getting-started/faq"]
           },
           {
             "group": "Guides",
-            "pages": ["guides/skills", "guides/multi-agent", "guides/mcp", "guides/automations"]
+            "pages": ["guides/skills", "guides/multi-agent", "guides/mcp", "guides/automations", "guides/desktops", "guides/files", "guides/capy-mail"]
           },
           {
             "group": "Best Practices",
@@ -81,11 +81,11 @@
         "groups": [
           {
             "group": "快速入门",
-            "pages": ["zh/index", "zh/getting-started/quickstart", "zh/getting-started/faq"]
+            "pages": ["zh/index", "zh/getting-started/quickstart", "zh/getting-started/credits", "zh/getting-started/faq"]
           },
           {
             "group": "功能指南",
-            "pages": ["zh/guides/skills", "zh/guides/multi-agent", "zh/guides/mcp", "zh/guides/automations"]
+            "pages": ["zh/guides/skills", "zh/guides/multi-agent", "zh/guides/mcp", "zh/guides/automations", "zh/guides/desktops", "zh/guides/files", "zh/guides/capy-mail"]
           },
           {
             "group": "最佳实践",
@@ -115,11 +115,11 @@
         "groups": [
           {
             "group": "快速入門",
-            "pages": ["zh-Hant/index", "zh-Hant/getting-started/quickstart", "zh-Hant/getting-started/faq"]
+            "pages": ["zh-Hant/index", "zh-Hant/getting-started/quickstart", "zh-Hant/getting-started/credits", "zh-Hant/getting-started/faq"]
           },
           {
             "group": "功能指南",
-            "pages": ["zh-Hant/guides/skills", "zh-Hant/guides/multi-agent", "zh-Hant/guides/mcp", "zh-Hant/guides/automations"]
+            "pages": ["zh-Hant/guides/skills", "zh-Hant/guides/multi-agent", "zh-Hant/guides/mcp", "zh-Hant/guides/automations", "zh-Hant/guides/desktops", "zh-Hant/guides/files", "zh-Hant/guides/capy-mail"]
           },
           {
             "group": "最佳實踐",

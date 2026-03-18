@@ -1,0 +1,56 @@
+---
+title: "桌面（Desktops）"
+description: "把工作组织成项目工作区，支持多会话共享和文件夹分组"
+---
+
+## Desktop 是什么
+
+Desktop 是一个有名字的项目工作区。每个 Desktop 在沙盒里有一个专属目录，路径为 `~/a0/workspace/<desktop-id>/`。在这个 Desktop 里打开的所有 session 都在这个共享目录里工作——它们读写的是同一批文件。
+
+这让 Desktop 非常适合跨多次对话的项目。在一个 session 里开始的任务，换一个 session 接着做，文件还在原地。
+
+## 会话（Sessions）
+
+每个 Desktop 里可以同时运行多个 session。每个 session 是独立的对话线程，但它们都共享同一个项目目录。
+
+实用场景：
+- 一个 session 生成图片，另一个同时写配套文案
+- 一个 session 处理前端代码，另一个处理后端
+- 一个 session 做调研，另一个起草报告
+
+所有输出都落在同一个 `~/a0/workspace/<desktop-id>/` 目录里。
+
+**新建 session：** 点击 Desktop 顶部会话名旁边的 **+** 按钮。
+
+**切换 session：** 点击顶部的会话名下拉菜单选择。
+
+## 文件夹（Folders）
+
+文件夹用来在侧边栏里给 Desktop 分组。点击"Desktops"旁边的 **+** 图标（Create Folder）新建。
+
+示例结构：
+
+```
+📁 开发
+  ├── 我的应用 前端
+  ├── 我的应用 后端
+  └── 部署脚本
+
+📁 内容创作
+  ├── 博客文章
+  └── 社交媒体
+```
+
+文件夹只是用于展示分组，不影响文件系统。
+
+## 收藏（Favorites）
+
+点击 session 标题栏里的 **☆** 图标，把常用 session 固定到侧边栏顶部的 **Favorites** 区域。再点一次取消收藏。
+
+## 新建 Desktop
+
+点击侧边栏里的 **New Desktop**，起一个能反映项目内容的名字。Happycapy 会为它创建一个全新的工作区目录。
+
+<Tip>
+  一个项目对应一个 Desktop 是个好习惯。需要并行推进任务时，在同一个 Desktop 下开多个 session——所有输出都落在同一个目录里，结果不会散落各处。
+</Tip>

@@ -1,0 +1,56 @@
+---
+title: "Desktops"
+description: "Organize your work into project workspaces with shared sessions and folders"
+---
+
+## What a Desktop is
+
+A Desktop is a named project workspace. Each Desktop gets its own directory inside your sandbox at `~/a0/workspace/<desktop-id>/`. All sessions you open within that Desktop work in this shared directory — they read and write the same files.
+
+This makes Desktops useful for projects that span multiple conversations. Start a task in one session, pick it up in another, and the files are already there.
+
+## Sessions
+
+Inside each Desktop, you can run multiple sessions at the same time. Each session is its own conversation thread, but they all share the same project directory.
+
+Practical uses:
+- One session generates images while another writes the accompanying copy
+- One session handles frontend code, another handles the backend
+- One session researches a topic, another drafts the report
+
+All output lands in the same `~/a0/workspace/<desktop-id>/` folder.
+
+**To open a new session:** click the **+** button next to the session name at the top of the Desktop.
+
+**To switch between sessions:** click the session name dropdown at the top.
+
+## Folders
+
+Folders group Desktops in the sidebar. Click the **+** icon next to "Desktops" (Create Folder) to make one.
+
+Example structure:
+
+```
+📁 dev
+  ├── my-app frontend
+  ├── my-app backend
+  └── deploy scripts
+
+📁 content
+  ├── blog posts
+  └── social media
+```
+
+Folders are organizational only — they don't affect the filesystem.
+
+## Favorites
+
+Click the **☆** icon in a session's header to pin it to the **Favorites** section at the top of the sidebar. Useful for sessions you return to often. Click again to remove.
+
+## Creating a Desktop
+
+Click **New Desktop** in the sidebar. Give it a name that reflects the project. Happycapy creates a fresh workspace directory for it.
+
+<Tip>
+  One Desktop per project is a clean setup. Use multiple sessions within it when you want to run tasks in parallel — they all share the same output folder, so results stay together.
+</Tip>

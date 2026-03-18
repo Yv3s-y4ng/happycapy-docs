@@ -1,0 +1,77 @@
+---
+title: "Files"
+description: "Browse, manage, and download files across your sandbox"
+---
+
+## What Files is
+
+Files is a full file browser for your sandbox. Click **Files** in the left sidebar to open it.
+
+Your sandbox is a persistent Linux environment — every file Happycapy creates, every script it runs, and every output it generates lives here. Files gives you direct access to that filesystem.
+
+## Navigating the sidebar
+
+The left panel has three sections:
+
+**Home** — the root of your sandbox filesystem. This is where you'll find everything: config files, installed tools, conversation outputs, and any files Happycapy has created during your sessions.
+
+**Desktops** — files organized by Desktop. If you have multiple Desktops for different projects, this view lets you see which files belong to which context.
+
+**Skills** — the Skills installed in your sandbox. You can browse Skill files here to see what a Skill does or copy its configuration.
+
+## Finding files
+
+Use the **Search** box in the top right to search by filename. The file list shows the name, date modified, and file size for each item.
+
+Toggle between grid view and list view using the icons next to the search box.
+
+## Working with outputs
+
+When Happycapy completes a task that produces files — images, documents, data exports, processed videos — those files are saved to your sandbox. Find them in Files, then right-click to download to your local machine, or ask Happycapy to package them for you:
+
+```
+Package all the images in the outputs folder into a zip file for me to download
+```
+
+## Uploading files
+
+Use the **+** button in the chat input to upload files from your computer directly into the conversation. Uploaded files land in the `uploads/` folder in your sandbox Home.
+
+<Note>
+  Supported formats: Images (JPG, PNG), Documents (PDF, Word, Excel), Videos (MP4), Data files (CSV, JSON), Code (all languages). Maximum 100MB per file.
+</Note>
+
+## Advanced: configuring your project workspace
+
+Every Desktop has a dedicated project directory at `~/a0/workspace/<desktop-id>/`. All sessions within that Desktop share this directory. Every file in it is editable — you can navigate there in Files and modify anything directly.
+
+This gives you full control over how Claude behaves in a Desktop. A well-structured project workspace looks like this:
+
+```
+your-project/
+├── CLAUDE.md              ← persistent instructions for Claude in this Desktop
+├── README.md
+│
+├── .claude/
+│   ├── settings.json      ← Claude Code configuration
+│   ├── hooks/             ← automation triggers and checks
+│   └── skills/            ← custom skills for this project
+│       └── my-skill/
+│           └── SKILL.md
+│
+├── docs/
+│   ├── architecture.md
+│   └── decisions/
+│
+└── src/                   ← your actual project code
+    └── api/
+        └── CLAUDE.md      ← sub-context for this module
+```
+
+**`CLAUDE.md`** is the most useful file. Put project context, coding conventions, and persistent instructions in it. Claude reads it at the start of every session in this Desktop, so you never have to re-explain the project.
+
+**`.claude/skills/`** holds custom Skills scoped to this project. Skills here are available to all sessions in the Desktop without being installed globally.
+
+**`.claude/hooks/`** contains automation scripts that run on triggers — for example, running tests after every code edit.
+
+Your conversation history is stored separately at `~/.claude/projects/`, organized by Desktop, as `.jsonl` files.

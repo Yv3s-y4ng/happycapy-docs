@@ -1,0 +1,54 @@
+---
+title: "Capy Mail"
+description: "用专属的 Capymail 邮箱地址通过发邮件触发任务"
+---
+
+## Capy Mail 是什么
+
+每个 Happycapy 账户都有一个专属的 `capymail.ai` 邮箱地址。发邮件到这个地址，Happycapy 就会把它当成任务来执行——不需要打开 App。
+
+这样一来，你的收件箱就变成了 Happycapy 的触发器。转发一封客户询价邮件，让 Happycapy 帮你起草回复；给自己发条备忘，让它整理进 Notion 页面；发一个链接，让它总结内容。
+
+## 找到你的邮箱地址
+
+进入 **Settings → Capy Mail**，地址显示在顶部，格式类似 `your_username@capymail.ai`。
+
+## Allowed Senders（允许发件人）
+
+Capy Mail 只处理白名单内地址发来的邮件，最多可以添加 4 个。
+
+添加方法：
+1. 打开 **Settings → Capy Mail**
+2. 在"Add email address"输入框里填写邮箱地址
+3. 点击 **+** 按钮
+
+随时可以点击地址旁的删除按钮移除某个发件人。
+
+<Warning>
+  不在白名单内的邮件会被直接忽略。在用 Capy Mail 发送任务之前，先确认你要用的邮箱地址已经加入了 Allowed Senders。
+</Warning>
+
+## 邮件怎么写
+
+像在对话框里输入任务一样写邮件正文就行。Capy Mail 会把邮件的主题和正文一起传给 Happycapy 作为任务内容。
+
+示例：
+
+```
+主题：每日简报
+正文：抓取今天 AI 领域的 5 条重要新闻，给我一个摘要
+```
+
+```
+主题：更新 Notion
+正文：把以下内容添加到我的项目笔记页面 [粘贴内容]
+Token: ntn_你的_notion_token
+```
+
+## 搭配 Automations 使用
+
+Capy Mail 和 Automations 配合效果很好。设置一个邮件触发的自动化任务——当指定发件人发来指定主题的邮件时，自动运行某个 Skill。这样完全不用打开 Happycapy 就能跑完一整套流程。
+
+<Tip>
+  最简单的入门方式：把自己的邮箱加进 Allowed Senders，之后想到什么任务就发邮件到你的 Capymail 地址。用起来就像一个会自动执行的待办收件箱。
+</Tip>
