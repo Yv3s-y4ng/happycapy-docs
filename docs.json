@@ -68,7 +68,7 @@
           },
           {
             "group": "Integrations",
-            "pages": ["integrations/github", "integrations/notion", "integrations/vscode"]
+            "pages": ["integrations/github", "integrations/notion"]
           },
           {
             "group": "Community",
@@ -102,7 +102,7 @@
           },
           {
             "group": "集成",
-            "pages": ["zh/integrations/github", "zh/integrations/notion", "zh/integrations/vscode"]
+            "pages": ["zh/integrations/github", "zh/integrations/notion"]
           },
           {
             "group": "社区",
@@ -136,7 +136,7 @@
           },
           {
             "group": "整合",
-            "pages": ["zh-Hant/integrations/github", "zh-Hant/integrations/notion", "zh-Hant/integrations/vscode"]
+            "pages": ["zh-Hant/integrations/github", "zh-Hant/integrations/notion"]
           },
           {
             "group": "社群",
