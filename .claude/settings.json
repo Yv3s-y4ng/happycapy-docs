@@ -1,0 +1,27 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "asyncRewake": true,
+            "statusMessage": "Validating docs...",
+            "command": "node -e \"const {execSync}=require('child_process');try{execSync('npx mintlify validate',{stdio:'pipe'});}catch(e){const out=e.stdout?e.stdout.toString().replace(/\\x1b\\[[0-9;]*m/g,'').trim():e.message;console.log(JSON.stringify({systemMessage:'mintlify validate failed:\\n'+out}));process.exit(2);}\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"const c=[];process.stdin.on('data',d=>c.push(d));process.stdin.on('end',()=>{const i=JSON.parse(Buffer.concat(c).toString()),fp=i.tool_input&&(i.tool_input.file_path||i.tool_input.new_file_path);if(!fp||!fp.endsWith('docs.json'))return;try{JSON.parse(require('fs').readFileSync('docs.json','utf8'));}catch(e){console.log(JSON.stringify({decision:'block',reason:'docs.json invalid JSON: '+e.message}));process.exit(2);}});\""
+          }
+        ]
+      }
+    ]
+  }
+}

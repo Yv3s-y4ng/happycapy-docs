@@ -42,6 +42,22 @@ The site supports three languages, each mirroring the same directory structure:
 
 English is the source of truth. Chinese translations follow after English is finalized. Navigation entries for each language are defined separately in `docs.json` under `navigation.languages`.
 
+## Workflow
+
+### When to use plan mode
+
+For any non-trivial change — new pages, navigation restructuring, multi-file updates — enter plan mode first. For single-sentence edits or typo fixes, skip planning and edit directly.
+
+**Plan phase**: Define which files to create or modify, the content outline for each page, and what "done" looks like (e.g., registered in `docs.json`, all three languages updated).
+
+**Execute phase**: Implement in focused chunks. Prefer smaller, coherent sprints over one giant pass.
+
+**Evaluate phase**: Before finishing, check output against the writing style rules below. Self-evaluation is unreliable — treat the style rules as an external checklist, not a vibe check.
+
+### Multi-file changes
+
+When a change touches multiple files (e.g., a new guide that needs English + zh + zh-Hant versions plus a `docs.json` entry), list all affected files in the plan before touching any of them. Don't start writing until the full scope is clear.
+
 ## Writing style
 
 ### English — [humanizer](https://github.com/blader/humanizer/tree/main)
