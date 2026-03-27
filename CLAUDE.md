@@ -22,6 +22,23 @@ The site runs at `http://localhost:3000` by default.
 
 All navigation, theme, colors, and language settings live in `docs.json`. This is the single source of truth for the site structure. When adding new pages, register them in `docs.json` under the appropriate group for each language.
 
+## Interacting with happycapy.ai via Chrome DevTools
+
+The Happycapy app uses React. Standard `fill()` or `value =` won't trigger React state updates. Use this pattern:
+
+```js
+// 1. Inject text into the textarea
+const textarea = document.querySelector('textarea[placeholder="Ask Happycapy"]');
+const setter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value').set;
+setter.call(textarea, 'your message here');
+textarea.dispatchEvent(new Event('input', { bubbles: true }));
+textarea.dispatchEvent(new Event('change', { bubbles: true }));
+
+// 2. Send — take a snapshot first, find the "Send message" button uid, then click it
+```
+
+This works via the `chrome-devtools-mcp` plugin's `evaluate_script` tool. After injecting, take a snapshot to get the send button's uid (it changes from "Enter a message" (disabled) to "Send message" once text is present), then click it.
+
 ## Content structure
 
 Pages are `.mdx` files using Mintlify components (`<Card>`, `<CardGroup>`, `<Columns>`, `<Accordion>`, `<Note>`, `<Tip>`, etc.).
