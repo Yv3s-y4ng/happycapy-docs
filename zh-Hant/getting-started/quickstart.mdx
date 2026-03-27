@@ -3,139 +3,69 @@ title: "快速上手"
 description: "幾分鐘內開始使用 Happycapy"
 ---
 
-## 第一步:打開 Happycapy
+## 介面
 
-訪問 [happycapy.ai](https://happycapy.ai),註冊並登入後,你會看到主介面:
+前往 [happycapy.ai](https://happycapy.ai)，註冊並登入。
 
-<Columns cols={3}>
-  <div>
-    **左側邊欄**
-    - New Desktop
-    - Skill Store
-    - Files
-    - Automations
-    - Usage
-  </div>
-  <div>
-    **對話區**
-    - 與 Happycapy 對話
-    - 查看生成的內容
-    - 監控進度
-  </div>
-  <div>
-    **檔案面板**
-    - 瀏覽沙箱檔案
-    - 上傳檔案 (+)
-    - 下載輸出檔案
-  </div>
-</Columns>
+<Frame>
+  <img src="/images/features/main-interface.png" alt="Happycapy 主介面" />
+</Frame>
 
-## 第一次對話
+- **側邊欄** — 建立 Desktop、瀏覽 Skill Store、管理檔案、設定自動化。
+- **對話區** — 和 Happycapy 對話，即時查看結果。
+- **輸入框** — 輸入需求，用 **+** 上傳檔案，選擇 Skill 或切換模型。
 
-別緊張,就像和朋友聊天一樣。
+## 開始對話
 
-在中間的輸入框裏,試試這句話:
+在輸入框裡寫下你的需求，Happycapy 處理剩下的。
 
 ```
-畫一隻可愛的卡皮巴拉,漫畫風格
+幫我建一個深色主題的個人作品集網站
 ```
 
-按回車,看著 Happycapy 為你創建圖片。
-
-或者試試:
-
 ```
-生成不同美術風格的可愛卡皮巴拉
+分析這份 CSV，生成按月趨勢的圖表
 ```
 
-Happycapy 會根據你的要求調整。你可以在 `outputs/` 資料夾中看到這些圖片並可以下載。版權完全屬於你。
+```
+為一家叫「Morning Brew」的咖啡店設計 logo
+```
 
-## 處理檔案
+輸出檔案保存在沙箱裡，點側邊欄的 **Files** 查看。
 
-直接拖曳檔案到對話視窗，或點擊對話輸入框旁的 **+** 按鈕從本機選擇檔案。上傳的檔案會放進沙箱，Happycapy 可以立即讀取和處理。
+## 上傳檔案
+
+把檔案拖進對話視窗，或點輸入框的 **+** 選擇檔案。
+
+Happycapy 可以直接讀取和處理——表格、PDF、圖片、程式碼、影片都行。
 
 <Note>
-  支援的格式：圖片（JPG/PNG）、文件（PDF/Word/Excel）、影片（MP4）、資料檔案（CSV/JSON）、程式碼（所有語言）。單個檔案最大 100MB，支援批次上傳。
+  支援格式：圖片（JPG/PNG）、文件（PDF/Word/Excel）、影片（MP4）、資料（CSV/JSON）、程式碼（所有語言）。單檔最大 100MB。
 </Note>
 
-Happycapy 產生的檔案——圖片、處理後的文件、匯出的資料——都會保存在沙箱裡。點擊左側邊欄的 **Files** 隨時瀏覽、搜尋和下載。
+## 安裝技能
 
-## 快速上手的例子
+技能擴展 Happycapy 的能力。打開側邊欄的 **Skill Store**，找到技能，點擊安裝。
 
-<AccordionGroup>
-  <Accordion icon="image" title="案例 1:生成圖片並下載">
-    最簡單的例子,10 秒上手。
+安裝後 Happycapy 會在需要時自動調用，你也可以直接用名字調用：
 
-    **第 1 步:說出你的需求**
+```
+/frontend-design 做一個 SaaS 產品的落地頁
+```
 
-    在輸入框輸入:
-    ```
-    生成一張圖片:可愛的卡皮巴拉在草地上曬太陽
-    ```
-
-    **第 2 步:等待生成**
-
-    圖片會在約 10-15 秒內顯示在對話區,自動保存在 `outputs/` 資料夾。
-
-    **第 3 步:下載到本地**
-
-    - **方法 1**:右側檔案列表找到圖片,右鍵下載
-    - **方法 2**:直接說「把這張圖片打包給我下載」
-
-    <Tip>
-      不滿意?直接說「再來一張,風格更卡通一點」,Happycapy 會繼續調整。
-    </Tip>
-  </Accordion>
-
-  <Accordion icon="file-arrow-up" title="案例 2:上傳檔案並處理">
-    學會上傳檔案,Happycapy 能協助你處理各種檔案。
-
-    **第 1 步:上傳檔案**
-
-    - **方法 1**:直接拖拽檔案到對話窗口
-    - **方法 2**:點選輸入框左邊的 + 號,選擇檔案
-
-    **第 2 步:告訴 Happycapy 要做什麼**
-
-    ```
-    請幫我整理這份 Excel:
-    1. 刪除重複資料
-    2. 按日期排序
-    3. 生成一份乾淨的新表格
-    ```
-
-    **第 3 步:等待處理完成**
-
-    Happycapy 會讀取檔案、處理資料、生成新檔案,並告訴你改了什麼。處理好的檔案會保存在 `outputs/` 資料夾。
-  </Accordion>
-</AccordionGroup>
-
-## 快速提示
+## 接下來
 
 <CardGroup cols={2}>
-  <Card title="說清楚需求" icon="bullseye">
-    越具體越好
+  <Card title="Desktop" icon="desktop" href="/zh-Hant/guides/desktops">
+    持久化工作區，多 session 共享檔案
   </Card>
-
-  <Card title="分步說" icon="rotate">
-    邊做邊調整
+  <Card title="技能" icon="wand-magic-sparkles" href="/zh-Hant/guides/skills">
+    瀏覽 300,000+ 技能
   </Card>
-
-  <Card title="給例子" icon="lightbulb">
-    上傳參考圖,Happycapy 會學習
+  <Card title="自動化" icon="clock" href="/zh-Hant/guides/automations">
+    讓任務自動執行
   </Card>
-
-  <Card title="不滿意就說" icon="comments">
-    直接指出問題
+  <Card title="常見問題" icon="circle-question" href="/zh-Hant/getting-started/faq">
+    資料安全、模型、限制等
   </Card>
 </CardGroup>
-
-## 下一步
-
-<Card
-  title="探索常見問題"
-  icon="circle-question"
-  href="/getting-started/faq"
->
-  了解資料安全、支援的 AI 模型、檔案大小限制等
-</Card>
