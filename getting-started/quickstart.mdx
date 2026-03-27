@@ -3,139 +3,69 @@ title: "Quick Start"
 description: "Get started with Happycapy in minutes"
 ---
 
-## Step 1: Open Happycapy
+## The interface
 
-Visit [happycapy.ai](https://happycapy.ai), register, and log in to see the main interface:
+Visit [happycapy.ai](https://happycapy.ai), register, and log in.
 
-<Columns cols={3}>
-  <div>
-    **Left Sidebar**
-    - New Desktop
-    - Skill Store
-    - Files
-    - Automations
-    - Usage
-  </div>
-  <div>
-    **Conversation Area**
-    - Chat with Happycapy
-    - View generated content
-    - Monitor progress
-  </div>
-  <div>
-    **File Panel**
-    - Browse sandbox files
-    - Upload files (+)
-    - Download outputs
-  </div>
-</Columns>
+<Frame>
+  <img src="/images/features/main-interface.png" alt="Happycapy main interface" />
+</Frame>
 
-## Your first conversation
+- **Sidebar** — Create Desktops, browse the Skill Store, manage Files, set up Automations.
+- **Conversation area** — Talk to Happycapy, see results in real time.
+- **Input box** — Type your request, attach files with **+**, pick a Skill, or choose a model.
 
-Talk to Happycapy like you would a friend.
+## Start a conversation
 
-In the input box at the bottom, try this:
+Type what you need in the input box. Happycapy handles the rest.
 
 ```
-Draw a cute capybara in cartoon style
+Build me a personal portfolio website with a dark theme
 ```
 
-Press Enter and watch Happycapy create your image.
-
-Or try:
-
 ```
-Generate cute capybaras in different art styles
+Analyze this CSV and create a chart showing monthly trends
 ```
 
-Happycapy will adjust to your requirements. You'll see the images in the `outputs/` folder and can download them. The copyright is yours.
+```
+Generate a logo for a coffee shop called "Morning Brew"
+```
 
-## Working with files
+Outputs are saved to your sandbox. Find them in **Files** in the sidebar.
 
-Drag files directly into the conversation window, or click the **+** button in the chat input to pick files from your computer. Uploaded files land in your sandbox and Happycapy can read and process them immediately.
+## Upload files
+
+Drag files into the conversation window, or click **+** in the input box.
+
+Happycapy can read and process them immediately — spreadsheets, PDFs, images, code, video.
 
 <Note>
-  Supported formats: Images (JPG/PNG), Documents (PDF/Word/Excel), Videos (MP4), Data (CSV/JSON), Code (all languages). Maximum 100MB per file. Multiple files at once.
+  Supported formats: Images (JPG/PNG), Documents (PDF/Word/Excel), Videos (MP4), Data (CSV/JSON), Code (all languages). Maximum 100MB per file.
 </Note>
 
-Files that Happycapy creates — images, processed documents, exported data — are saved to your sandbox. Access them any time from **Files** in the left sidebar, where you can browse, search, and download everything your sandbox contains.
+## Install a skill
 
-## Quick examples to get started
+Skills extend what Happycapy can do. Open **Skill Store** in the sidebar, find a skill, and click install.
 
-<AccordionGroup>
-  <Accordion icon="image" title="Case 1: generate and download images">
-    The simplest example. Get started in 10 seconds.
+Once installed, Happycapy uses it automatically when relevant — or you can call it by name.
 
-    **Step 1: state your needs**
+```
+/frontend-design Create a landing page for a SaaS product
+```
 
-    Type in the input box:
-    ```
-    Generate an image: a cute capybara sunbathing on grass
-    ```
-
-    **Step 2: wait for generation**
-
-    The image will appear in the conversation area in about 10-15 seconds and automatically save to the `outputs/` folder.
-
-    **Step 3: download locally**
-
-    - **Method 1**: Find the image in the right file list, right-click to download
-    - **Method 2**: Simply say "package this image for me to download"
-
-    <Tip>
-      Not satisfied? Just say "Generate another one with a more cartoon style" and Happycapy will adjust accordingly.
-    </Tip>
-  </Accordion>
-
-  <Accordion icon="file-arrow-up" title="Case 2: upload and process files">
-    Learn to upload files so Happycapy can help you process various documents.
-
-    **Step 1: upload files**
-
-    - **Method 1**: Drag and drop files directly into the conversation window
-    - **Method 2**: Click the + button next to the input box to select files
-
-    **Step 2: tell Happycapy what to do**
-
-    ```
-    Help me organize this Excel file:
-    1. Remove duplicate data
-    2. Sort by date
-    3. Generate a clean new spreadsheet
-    ```
-
-    **Step 3: wait for processing**
-
-    Happycapy will read the file, process the data, generate new files, and explain what changes were made. Processed files are saved to the `outputs/` folder.
-  </Accordion>
-</AccordionGroup>
-
-## Quick tips for success
+## What to explore next
 
 <CardGroup cols={2}>
-  <Card title="Be specific" icon="bullseye">
-    The more detailed your request, the better the results
+  <Card title="Desktops" icon="desktop" href="/guides/desktops">
+    Persistent workspaces with shared files across sessions
   </Card>
-
-  <Card title="Work iteratively" icon="rotate">
-    Start simple and refine step by step
+  <Card title="Skills" icon="wand-magic-sparkles" href="/guides/skills">
+    Browse 300,000+ skills in the Skill Store
   </Card>
-
-  <Card title="Provide examples" icon="lightbulb">
-    Upload reference images for Happycapy to learn from
+  <Card title="Automations" icon="clock" href="/guides/automations">
+    Schedule tasks to run on their own
   </Card>
-
-  <Card title="Give feedback" icon="comments">
-    If results aren't perfect, point out what needs adjustment
+  <Card title="FAQ" icon="circle-question" href="/getting-started/faq">
+    Data safety, models, limits, and more
   </Card>
 </CardGroup>
-
-## Next steps
-
-<Card
-  title="Explore common questions"
-  icon="circle-question"
-  href="/getting-started/faq"
->
-  Learn about data safety, supported AI models, file size limits, and more
-</Card>

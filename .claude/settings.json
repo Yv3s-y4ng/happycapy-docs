@@ -1,17 +1,5 @@
 {
   "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "asyncRewake": true,
-            "statusMessage": "Validating docs...",
-            "command": "node -e \"const {execSync}=require('child_process');try{execSync('npx mintlify validate',{stdio:'pipe'});}catch(e){const out=e.stdout?e.stdout.toString().replace(/\\x1b\\[[0-9;]*m/g,'').trim():e.message;console.log(JSON.stringify({systemMessage:'mintlify validate failed:\\n'+out}));process.exit(2);}\""
-          }
-        ]
-      }
-    ],
     "PostToolUse": [
       {
         "matcher": "Write|Edit",

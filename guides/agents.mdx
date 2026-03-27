@@ -1,0 +1,40 @@
+---
+title: "Agents"
+description: "Create custom AI agents with their own identity, memory, and skills"
+---
+
+## What it is
+
+An Agent is a custom AI persona with its own identity, memory, and skill set. The default agent is **Capy**. You can create additional agents for different workflows — a research assistant, a code reviewer, a writing partner — each with its own personality and context.
+
+## The agent files
+
+<Frame>
+  <img src="/images/features/agents-files.png" alt="Agent configuration files" />
+</Frame>
+
+Each agent has a set of markdown files that define who it is:
+
+- **SOUL.md** — the agent's core values and principles
+- **USER.md** — context about who it's helping (you)
+- **IDENTITY.md** — the agent's role and personality
+- **MEMORY.md** — persistent memory across sessions
+- **AGENTS.md** — the main instruction file that ties everything together
+
+Every time you start a conversation, the agent reads these files in order — it knows who it is before it starts working.
+
+## Setting up an agent
+
+You don't need to write these files by hand. Create a new agent in **Agents** in the sidebar, start a conversation with it, and say:
+
+```
+Help me set up this agent.
+```
+
+Capy will ask what you need, then generate all the configuration files for you. Describe the role, your preferences, and what you want it to remember — Capy handles the rest.
+
+## Model and skills
+
+In the **Overview** tab of each agent, pick a default model and attach installed skills. Different agents can use different models — Haiku for lightweight tasks, Opus for complex work.
+
+To switch agents during a conversation, use the agent selector in the input box.
