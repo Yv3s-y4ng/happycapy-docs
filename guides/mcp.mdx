@@ -3,7 +3,7 @@ title: "MCP Usage Guide"
 description: "Learn how to use MCP for multi-session memory management and integration with external platforms"
 ---
 
-## What is MCP?
+## What Is MCP?
 
 MCP (Model Context Protocol) is an open protocol standard that lets AI assistants securely connect to external tools, data sources, and services.
 
@@ -35,23 +35,23 @@ Think of MCP as a "plugin system" for AI. It lets AI:
   </Card>
 </CardGroup>
 
-## Why use MCP?
+## Why Use MCP?
 
 After installing MCP in Happycapy, you can:
 
-### Automate routine tasks
+### Automate Routine Tasks
 Let AI handle emails, schedules, and document organization
 
-### Cross-platform collaboration
+### Cross-Platform Collaboration
 Do multiple application operations in one conversation (like reading attachments from Gmail, processing them, and uploading to Notion)
 
-### Persistent context
+### Persistent Context
 Memory MCP lets AI remember project information, relationships, and other important content across sessions
 
-### Simplify development
+### Simplify Development
 Manage GitHub repositories, create Issues, and view code directly in conversations
 
-## Quick installation: use our automation skill
+## Quick Installation: Use Our Automation Skill
 
 We built a one-click installation skill for Happycapy that automatically configures Memory MCP, Composio MCP, and GitHub Copilot MCP.
 
@@ -80,11 +80,11 @@ We built a one-click installation skill for Happycapy that automatically configu
 The skill will guide you through all configuration steps, including collecting necessary API Keys, updating configuration files, restarting sessions, etc. For Memory MCP, no credentials are required - just one click to install!
 </Tip>
 
-## Memory MCP: highly recommended
+## Memory MCP: Highly Recommended
 
 Memory MCP is an official knowledge graph storage MCP that gives AI persistent memory. **This is our most recommended MCP.**
 
-### Why you need Memory MCP
+### Why You Need Memory MCP
 
 <CardGroup cols={3}>
   <Card title="Cross-Session Memory" icon="arrows-rotate">
@@ -100,7 +100,7 @@ Memory MCP is an official knowledge graph storage MCP that gives AI persistent m
   </Card>
 </CardGroup>
 
-### Memory MCP usage examples
+### Memory MCP Usage Examples
 
 After installing Memory MCP, you can use these prompts to integrate historical conversation information into the knowledge graph. Choose the version that fits your needs:
 
@@ -153,7 +153,7 @@ Copy any prompt above and paste it into the dialog box. Happycapy will scan hist
 
 After connecting to GitHub, Happycapy can manage code repositories, create and view Issues, process Pull Requests, view CI/CD status, and more.
 
-### Get GitHub token
+### Get GitHub Token
 
 A token is like a key that lets Happycapy operate GitHub on your behalf.
 
@@ -180,7 +180,7 @@ A token is like a key that lets Happycapy operate GitHub on your behalf.
 **Important**: The token is only displayed once. Copy it immediately and save it in a safe place (like a password manager). Once you close the page, it's gone.
 </Warning>
 
-### Recommended permissions
+### Recommended Permissions
 
 <Tip>
 **For beginners**: If you're using it yourself, you can check all the permissions so you don't have to worry!
@@ -191,7 +191,7 @@ A token is like a key that lets Happycapy operate GitHub on your behalf.
 - `read:org` (read organization)
 </Tip>
 
-### Usage examples
+### Usage Examples
 
 <AccordionGroup>
   <Accordion icon="folder-plus" title="Create a new repository">
@@ -254,7 +254,7 @@ A token is like a key that lets Happycapy operate GitHub on your behalf.
 
 After connecting to Notion, Happycapy can read, edit, create Notion pages, organize notes, generate documents, and more.
 
-### Get Notion token
+### Get Notion Token
 
 <Steps>
   <Step title="Create Notion integration">
@@ -278,7 +278,7 @@ After connecting to Notion, Happycapy can read, edit, create Notion pages, organ
 **Key step**: After getting the token, you need to authorize the integration. Continue with the steps below.
 </Warning>
 
-### Give integration permission to access pages
+### Give Integration Permission to Access Pages
 
 This is the most important step.
 
@@ -300,7 +300,7 @@ This is the most important step.
 Each page you want Happycapy to access requires separate authorization. If the page has subpages, the subpages will inherit permissions.
 </Note>
 
-### Get page ID
+### Get Page ID
 
 To operate on a Notion page, you need to know the page's ID:
 
@@ -337,7 +337,7 @@ Page ID: 3065ab5584b5803e8572fcb253106e5a
 New content: [content you want to add]
 ```
 
-## Related resources
+## Related Resources
 
 <CardGroup cols={2}>
   <Card title="MCP Manager Skill" icon="github" href="https://github.com/Y1fe1-Yang/happycapy-mcp-manager">

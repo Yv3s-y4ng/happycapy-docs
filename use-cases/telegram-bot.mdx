@@ -11,7 +11,7 @@ A Happycapy user was inspired by another user's Discord Bot article. She decided
 
 > "The predecessor of this project is 'Building a 24/7 Discord Bot in Happycapy Sandbox'. The Telegram Bot began by referencing that structure and evolved its own architecture."
 
-## What she built
+## What She Built
 
 ### A 24/7 Telegram Bot Skill
 
@@ -25,11 +25,11 @@ An open-source, one-command-setup Telegram bot that runs on Happycapy's sandbox 
   telegram-bot-skill — 7x24 AI-powered Telegram Bot for Happycapy
 </Card>
 
-### Key technical difference from Discord
+### Key Technical Difference from Discord
 
 While Discord bots rely on WebSocket connections (requiring discord.js with ~70+ dependencies), this Telegram bot uses **HTTP Long Polling** — native `fetch` API with zero npm dependencies. This makes it lighter and more sandbox-friendly.
 
-### 4-layer fault tolerance architecture
+### 4-Layer Fault Tolerance Architecture
 
 The bot features a robust 4-layer recovery system, evolved from the original 3-layer design:
 
@@ -75,7 +75,7 @@ Plus two independent systems:
   </Card>
 </CardGroup>
 
-### Real engineering challenges solved
+### Real Engineering Challenges Solved
 
 The article documents the real debugging process — not just the final solution:
 
@@ -85,13 +85,13 @@ The article documents the real debugging process — not just the final solution
 - **No cron available**: Had to implement custom scheduled tasks using shell loops
 - **Path issues**: `PROJECT_ROOT` resolution failures — fixed with absolute path injection
 
-## An honest take
+## An Honest Take
 
 What makes this write-up stand out is its honesty. The author openly states that true 24/7 uptime hasn't been fully achieved — the bot only auto-restarts when a user opens a Happycapy session, not independently. This kind of transparency is valuable for the community.
 
 > "Honestly, 7x24 is not yet fully achieved. But the architecture is solid and the auto-recovery works reliably within session scope."
 
-## Key takeaways
+## Key Takeaways
 
 <CardGroup cols={2}>
   <Card title="Open Source First" icon="code-branch">

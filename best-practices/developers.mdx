@@ -3,17 +3,17 @@ title: "Developers Guide"
 description: "How developers can use Happycapy efficiently for rapid prototyping, debugging, testing, and code exploration"
 ---
 
-## Who this is for
+## Who This Is For
 
 Software Engineers, Data Engineers, DevOps, Security Engineers
 
-## Core scenarios
+## Core Scenarios
 
-### Scenario 1: Rapid prototyping (automatic acceptance mode)
+### Scenario 1: Rapid Prototyping (Automatic Acceptance Mode)
 
 **Real Case:** The product team uses "automatic acceptance mode" to let AI build Vim mode independently, with 70% of the code completed by AI.
 
-#### How to do it
+#### How to Do It
 
 <AccordionGroup>
   <Accordion icon="code" title="Step 1: Start with Clean Git State">
@@ -45,7 +45,7 @@ Software Engineers, Data Engineers, DevOps, Security Engineers
   </Accordion>
 </AccordionGroup>
 
-#### Best practices
+#### Best Practices
 
 <CardGroup cols={2}>
   <Card title="Good for" icon="check">
@@ -64,11 +64,11 @@ Software Engineers, Data Engineers, DevOps, Security Engineers
   Submit Git checkpoints at each stage to facilitate rollback if needed.
 </Tip>
 
-### Scenario 2: Debugging complex problems
+### Scenario 2: Debugging Complex Problems
 
 **Real Case:** The security team reduced incident resolution time from 10-15 minutes to 5 minutes.
 
-#### How to do it
+#### How to Do It
 
 Provide comprehensive context for faster debugging:
 
@@ -107,11 +107,11 @@ Please help me:
 
 **Time savings: 50%**
 
-### Scenario 3: Test driven development (TDD)
+### Scenario 3: Test Driven Development (TDD)
 
 **Real Case:** Inference teams use AI to generate comprehensive unit tests that automatically cover edge cases.
 
-#### How to do it
+#### How to Do It
 
 Follow the TDD red-green-refactor cycle:
 
@@ -126,7 +126,7 @@ First help me write test cases covering:
 Then implement the function and ensure all tests pass.
 ```
 
-#### TDD workflow
+#### TDD Workflow
 
 1. **Happycapy writes tests first** (TDD red light)
 2. **Then writes the implementation** (TDD green light)
@@ -139,11 +139,11 @@ Then implement the function and ensure all tests pass.
 - Reduces missing boundary situations
 - Better code quality
 
-### Scenario 4: Understand unfamiliar codebases quickly
+### Scenario 4: Understand Unfamiliar Codebases Quickly
 
 **Real Case:** The API team makes codebase exploration the "first stop", dramatically reducing context collection time.
 
-#### How to do it
+#### How to Do It
 
 Ask for a guided tour of the codebase:
 
@@ -160,7 +160,7 @@ Please help me:
    login logic
 ```
 
-#### What Happycapy will do
+#### What Happycapy Will Do
 
 <CardGroup cols={2}>
   <Card title="Architecture Diagram" icon="sitemap">
@@ -182,11 +182,11 @@ Please help me:
 
 **Time savings: from hours to minutes**
 
-### Scenario 5: Security review and infrastructure changes
+### Scenario 5: Security Review and Infrastructure Changes
 
 **Real Case:** Security teams use AI to quickly review Terraform plans.
 
-#### How to do it
+#### How to Do It
 
 <AccordionGroup>
   <Accordion icon="code" title="Generate Terraform Plan">
@@ -211,16 +211,16 @@ Please help me:
   </Accordion>
 </AccordionGroup>
 
-#### Happycapy helps you
+#### Happycapy Helps You
 
 - Identify high-risk operations (delete database, modify firewall rules)
 - Check whether permission configuration complies with best practices
 - Generate review checklist
 - Suggest safer alternatives
 
-## Developer-specific advice
+## Developer-Specific Advice
 
-### 1. Establish a self-validation loop
+### 1. Establish a Self-Validation Loop
 
 Create prompts that include automatic validation:
 
@@ -232,7 +232,7 @@ When implementing this feature:
 - Finally return code that passes all tests
 ```
 
-### 2. Develop intuition for task classification
+### 2. Develop Intuition for Task Classification
 
 <Columns cols={2}>
   <div>
@@ -249,7 +249,7 @@ When implementing this feature:
   </div>
 </Columns>
 
-### 3. Write clear and detailed prompts
+### 3. Write Clear and Detailed Prompts
 
 <Note>
   - Give explicit file paths when repositories have similar names
@@ -257,7 +257,7 @@ When implementing this feature:
   - Provide context (e.g., "This project uses TypeScript + React + Zustand")
 </Note>
 
-### 4. Use multiple instances for parallel work
+### 4. Use Multiple Instances for Parallel Work
 
 Happycapy supports multiple tabs, each tab is an independent session:
 
@@ -265,7 +265,7 @@ Happycapy supports multiple tabs, each tab is an independent session:
 - Maintain full context for each session
 - Switching is stress-free
 
-### 5. Treat refactoring like a "slot machine"
+### 5. Treat Refactoring Like a "Slot Machine"
 
 <AccordionGroup>
   <Accordion icon="save" title="Step 1: Save Current State">
@@ -291,9 +291,9 @@ Happycapy supports multiple tabs, each tab is an independent session:
   Starting over often has a higher success rate than correcting mistakes.
 </Tip>
 
-## Example use cases
+## Example Use Cases
 
-### Rapid API endpoint creation
+### Rapid API Endpoint Creation
 
 ```
 Create a new REST API endpoint:
@@ -306,7 +306,7 @@ Create a new REST API endpoint:
 - Update API documentation
 ```
 
-### Code quality improvements
+### Code Quality Improvements
 
 ```
 Review and improve the code quality of src/utils/validation.ts:
@@ -317,7 +317,7 @@ Review and improve the code quality of src/utils/validation.ts:
 5. Ensure consistent error handling
 ```
 
-### Migration to new framework
+### Migration to New Framework
 
 ```
 I need to migrate this React class component to a functional
@@ -333,7 +333,7 @@ Requirements:
 - Keep the same prop interface
 ```
 
-## Next steps
+## Next Steps
 
 <CardGroup cols={2}>
   <Card title="General best practices" icon="lightbulb" href="/best-practices/general">
