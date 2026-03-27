@@ -1,326 +1,61 @@
 ---
 title: "Automations 指南(Beta)"
-description: "學習如何使用觸發器和動作建立自動化工作流程"
+description: "定時自動執行 prompt"
 ---
 
-<img src="/images/features/automation.png" alt="Automations" style={{ borderRadius: '12px', marginBottom: '24px' }} />
-
 <Note>
-**Beta 功能**:Automations 目前處於測試階段,功能會持續完善。
+**Beta**：Automations 處於早期階段，功能會持續完善。
 </Note>
 
-## 什麼是 Automations
+## 是什麼
 
-Automations 是一套自動化規則系統,由**觸發器**和**動作**組成:
+Automation 按時間表自動向指定 Desktop 發送 prompt 並執行。你寫好 prompt，設定時間，Happycapy 自動跑——不需要手動操作。
 
-<Columns cols={2}>
-  <div>
-    **觸發器**
+## 建立 Automation
 
-    什麼情況下啟動自動化:
-    - 收到郵件
-    - 檔案上傳
-    - 定時任務
-    - Webhook 事件
-  </div>
+點擊側邊欄的 **Automations**，然後點 **Create Automation**。
 
-  <div>
-    **動作**
+<Frame>
+  <img src="/images/features/automation-create.png" alt="建立 Automation 對話框" />
+</Frame>
 
-    觸發後自動執行什麼操作:
-    - 生成報告
-    - 發送通知
-    - 處理資料
-    - 更新資料庫
-  </div>
-</Columns>
+填寫：
 
-## 如何建立 Automation
+- **Name** — 起個描述性名字（例如 "Morning summary"）
+- **Desktop** — 在哪個 Desktop 裡執行
+- **Session binding** — 綁定哪個 session（或主 session）
+- **Schedule** — 每天定時，或按間隔（每 N 小時）。可以選星期幾。
+- **Prompt** — Happycapy 要執行的內容
+- **Run immediately** — 開啟後會立即執行一次
 
-<Steps>
-  <Step title="開啟 Automations">
-    點選側邊欄的 **「Automations」**
-  </Step>
+點 **Create** 完成。
 
-  <Step title="建立新 Automation">
-    點選 **「Create Automation」** 按鈕
-  </Step>
+## 範例
 
-  <Step title="選擇觸發條件">
-    選擇什麼事件將啟動自動化
-  </Step>
-
-  <Step title="定義執行動作">
-    指定觸發後應該發生什麼
-  </Step>
-
-  <Step title="保存並啟用">
-    保存並啟用你的自動化規則
-  </Step>
-</Steps>
-
-## 實用案例
-
-### 案例 1:郵件自動分類歸檔
-
-<CardGroup cols={2}>
-  <Card title="觸發器" icon="envelope">
-    收到新郵件
-  </Card>
-
-  <Card title="動作" icon="gears">
-    分析郵件內容 → 提取關鍵資訊 → 歸檔到對應檔案夾 → 生成摘要
-  </Card>
-</CardGroup>
-
-### 案例 2:每日資料報告
-
-<CardGroup cols={2}>
-  <Card title="觸發器" icon="clock">
-    每天早上 9:00
-  </Card>
-
-  <Card title="動作" icon="gears">
-    抓取資料源 → 生成可視化圖表 → 撰寫分析報告 → 發送到指定郵箱
-  </Card>
-</CardGroup>
-
-### 案例 3:檔案自動處理
-
-<CardGroup cols={2}>
-  <Card title="觸發器" icon="file-arrow-up">
-    上傳新檔案到 uploads 檔案夾
-  </Card>
-
-  <Card title="動作" icon="gears">
-    識別檔案類型 → 執行相應處理(圖片壓縮、PDF 提取、影片轉碼等) → 保存到 outputs
-  </Card>
-</CardGroup>
-
-## 詳細範例:每日新聞精選
-
-<Note>
-**設置時間**:2 分鐘 | **後續**:每天自動執行
-
-**痛點**:每天打開 10 個網站看新聞,資訊太多看不過來,有價值的內容被淹沒
-</Note>
-
-### Automation 設定
+每天早上的新聞摘要：
 
 ```
-請幫我設置一個自動化任務:
+抓取 AI、創業和產品設計領域的熱門新聞。
+過濾掉標題黨，每條新聞用一句話總結。
+生成 HTML 簡報寄到我的信箱。
+```
 
-名稱:每日新聞精選
+每小時檢查 GitHub PR：
 
-觸發條件:每天早上 8:00
+```
+檢查 my-org/my-repo 所有 open 的 PR。
+列出需要我 review 或有新留言的。
+把結果發到當前 Desktop。
+```
 
-執行流程:
-1. 抓取以下領域的熱點新聞:
-   - AI 和科技
-   - 創業和商業
-   - 產品和設計
+每週專案報告：
 
-2. 智能過濾:
-   - 排除娛樂八卦
-   - 排除標題黨和廣告
-   - 只保留有深度的內容
-
-3. AI 總結每條新聞(50 字核心內容)
-
-4. 按重要性排序(優先行業重大事件)
-
-5. 生成精美的 HTML 日報
-
-6. 發送到我的郵箱
-
-讓我每天上班路上就能快速瞭解行業動態!
+```
+總結這個 Desktop 過去一週的所有工作。
+列出已完成任務、未解決問題和下一步計畫。
+生成報告儲存到 outputs/。
 ```
 
 <Tip>
-設置完成後,Happycapy 會每天早上 8 點自動執行。你只需要在手機上打開郵件,5 分鐘就能看完一天的重要資訊!
+  Prompt 的執行方式和你在對話裡手動輸入完全一樣。你能在 session 裡做的事，Automation 都能定時做。
 </Tip>
-
-## 更多自動化想法
-
-<AccordionGroup>
-  <Accordion icon="calendar-check" title="會議記錄處理">
-    **觸發器**:上傳會議錄音或逐字稿
-
-    **動作**:
-    - 轉錄音訊(如需要)
-    - 提取關鍵討論點
-    - 識別行動項目和負責人
-    - 建立任務追蹤清單
-    - 將摘要發送給與會者
-  </Accordion>
-
-  <Accordion icon="inbox" title="支援請求路由">
-    **觸發器**:收到新的客戶諮詢
-
-    **動作**:
-    - 分析諮詢類型和緊急程度
-    - 路由到合適的團隊成員
-    - 提取客戶資訊
-    - 建立追蹤工單
-    - 向客戶發送確認回覆
-  </Accordion>
-
-  <Accordion icon="chart-line" title="每週績效儀表板">
-    **觸發器**:每週五下午 5:00
-
-    **動作**:
-    - 從多個來源收集資料
-    - 生成圖表和視覺化
-    - 計算關鍵指標
-    - 建立 HTML 儀表板
-    - 發送郵件給利害關係人
-  </Accordion>
-
-  <Accordion icon="image" title="社群媒體內容流水線">
-    **觸發器**:上傳內容簡報文件
-
-    **動作**:
-    - 生成文案變體
-    - 使用 AI 建立圖片
-    - 針對不同平台優化
-    - 安排貼文
-    - 生成預覽連結
-  </Accordion>
-</AccordionGroup>
-
-## 觸發器類型
-
-Automations 支援多種觸發器類型:
-
-<CardGroup cols={2}>
-  <Card title="排程" icon="calendar">
-    在特定時間或間隔執行(每日、每週、每月)
-  </Card>
-
-  <Card title="檔案事件" icon="file">
-    當檔案上傳或修改時觸發
-  </Card>
-
-  <Card title="郵件" icon="envelope">
-    收到郵件時觸發(特定寄件者、主旨等)
-  </Card>
-
-  <Card title="Webhooks" icon="webhook">
-    通過 HTTP 請求由外部服務觸發
-  </Card>
-
-  <Card title="手動" icon="hand-pointer">
-    按一下按鈕即可隨需執行
-  </Card>
-
-  <Card title="鏈式" icon="link">
-    當另一個 automation 完成時觸發
-  </Card>
-</CardGroup>
-
-## 動作類型
-
-動作定義了當 automation 被觸發時會發生什麼:
-
-<CardGroup cols={3}>
-  <Card title="資料處理" icon="database">
-    轉換、過濾、聚合資料
-  </Card>
-
-  <Card title="檔案操作" icon="folder">
-    建立、移動、重新命名、壓縮檔案
-  </Card>
-
-  <Card title="通知" icon="bell">
-    發送郵件、SMS 或推播通知
-  </Card>
-
-  <Card title="AI 處理" icon="brain">
-    摘要、翻譯、分析內容
-  </Card>
-
-  <Card title="API 呼叫" icon="plug">
-    與外部服務互動
-  </Card>
-
-  <Card title="生成內容" icon="wand-magic-sparkles">
-    建立文件、圖片、影片
-  </Card>
-</CardGroup>
-
-## 最佳實踐
-
-<CardGroup cols={2}>
-  <Card title="從簡單開始" icon="seedling">
-    從簡單的 automation 開始,逐步增加複雜性
-  </Card>
-
-  <Card title="徹底測試" icon="vial">
-    在啟用前使用範例資料測試 automation
-  </Card>
-
-  <Card title="監控效能" icon="chart-line">
-    定期檢查 automation 日誌,確保正常運作
-  </Card>
-
-  <Card title="錯誤處理" icon="triangle-exclamation">
-    配置後備動作以應對異常情況
-  </Card>
-
-  <Card title="記錄工作流程" icon="book">
-    記錄每個 automation 的用途和原因
-  </Card>
-
-  <Card title="定期檢視" icon="rotate">
-    定期檢視並優化你的 automation
-  </Card>
-</CardGroup>
-
-## 成功技巧
-
-<Tip>
-**自然語言有效**:你不需要了解技術細節。只需用簡單的語言描述你想要發生的事情,Happycapy 就會為你配置 automation。
-</Tip>
-
-<Tip>
-**迭代改進**:從基本的 automation 開始,根據結果隨時間優化。你可以隨時編輯和增強現有的 automation。
-</Tip>
-
-<Warning>
-**注意頻率**:執行頻率過高的 automation(例如每分鐘一次)可能會消耗大量資源。為排程的 automation 選擇適當的間隔。
-</Warning>
-
-## 疑難排解
-
-<AccordionGroup>
-  <Accordion icon="circle-question" title="Automation 沒有觸發">
-    - 檢查 automation 是否已啟用(開關是否開啟)
-    - 驗證觸發條件是否正確
-    - 檢視 automation 日誌查看錯誤
-    - 檢查是否已授予必要的權限
-  </Accordion>
-
-  <Accordion icon="circle-xmark" title="動作執行失敗">
-    - 檢查 automation 日誌查看錯誤訊息
-    - 驗證 API 金鑰和憑證是否有效
-    - 確保必要的檔案或資料可用
-    - 手動測試動作以隔離問題
-  </Accordion>
-
-  <Accordion icon="clock-rotate-left" title="Automation 執行過慢">
-    - 簡化複雜的處理步驟
-    - 考慮拆分為多個 automation
-    - 減少正在處理的資料量
-    - 使用更有效率的檔案格式
-  </Accordion>
-</AccordionGroup>
-
-## 下一步
-
-<Card
-  title="建立你的第一個 Automation"
-  icon="rocket"
-  href="https://happycapy.ai"
->
-  開始自動化重複性任務,提升你的生產力
-</Card>

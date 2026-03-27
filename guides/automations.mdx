@@ -1,326 +1,61 @@
 ---
 title: "Automations Guide (Beta)"
-description: "Learn how to create automated workflows with triggers and actions"
+description: "Schedule prompts to run automatically on a timer"
 ---
 
-<img src="/images/features/automation.png" alt="Automations" style={{ borderRadius: '12px', marginBottom: '24px' }} />
-
 <Note>
-**Beta function**: Automations is currently in the testing stage, and functionality will continue to be improved.
+**Beta**: Automations is in early access. Functionality will continue to improve.
 </Note>
 
-## What are Automations?
+## What it is
 
-Automations are automated rule systems with **triggers** and **actions**:
+An Automation sends a prompt to a Desktop on a schedule. You write the prompt, pick when it runs, and Happycapy executes it automatically — no manual intervention needed.
 
-<Columns cols={2}>
-  <div>
-    **Trigger**
+## Creating an Automation
 
-    Under what circumstances automation starts:
-    - Receiving emails
-    - File uploads
-    - Scheduled tasks
-    - Webhook events
-  </div>
+Click **Automations** in the sidebar, then **Create Automation**.
 
-  <div>
-    **Action**
+<Frame>
+  <img src="/images/features/automation-create.png" alt="Create Automation dialog" />
+</Frame>
 
-    What operations are automatically performed after triggering:
-    - Generating reports
-    - Sending notifications
-    - Processing data
-    - Updating databases
-  </div>
-</Columns>
+Fill in:
 
-## How to create an automation
+- **Name** — something descriptive (e.g. "Morning summary")
+- **Desktop** — which Desktop to run in
+- **Session binding** — which session within that Desktop (or the main session)
+- **Schedule** — Daily at a specific time, or an interval (every N hours). Pick which days of the week.
+- **Prompt** — the message Happycapy will execute
+- **Run immediately** — toggle on to run once right now in addition to the schedule
 
-<Steps>
-  <Step title="Open automations">
-    Click **"Automations"** in the sidebar
-  </Step>
+Click **Create** and you're done.
 
-  <Step title="Create new automation">
-    Click the **"Create Automation"** button
-  </Step>
+## Examples
 
-  <Step title="Select trigger condition">
-    Choose what event will start the automation
-  </Step>
-
-  <Step title="Define execution action">
-    Specify what should happen when triggered
-  </Step>
-
-  <Step title="Save and activate">
-    Save and activate your automation rules
-  </Step>
-</Steps>
-
-## Practical cases
-
-### Case 1: automatic email classification and archiving
-
-<CardGroup cols={2}>
-  <Card title="Trigger" icon="envelope">
-    New email received
-  </Card>
-
-  <Card title="Actions" icon="gears">
-    Analyze email content → Extract key information → File to corresponding folder → Generate summary
-  </Card>
-</CardGroup>
-
-### Case 2: daily data report
-
-<CardGroup cols={2}>
-  <Card title="Trigger" icon="clock">
-    Every morning at 9:00 AM
-  </Card>
-
-  <Card title="Actions" icon="gears">
-    Grab data source → Generate visual chart → Write analysis report → Send to designated email
-  </Card>
-</CardGroup>
-
-### Case 3: automatic file processing
-
-<CardGroup cols={2}>
-  <Card title="Trigger" icon="file-arrow-up">
-    Upload new files to uploads folder
-  </Card>
-
-  <Card title="Actions" icon="gears">
-    Identify file type → Perform corresponding processing (image compression, PDF extraction, video transcoding, etc.) → Save to outputs
-  </Card>
-</CardGroup>
-
-## Detailed example: daily news selection
-
-<Note>
-**Setup time**: 2 minutes | **Follow-up**: Runs automatically every day
-
-**Pain point**: I open 10 websites every day to read news. There is too much information to read, and valuable content is drowned.
-</Note>
-
-### Automation configuration
+A morning news digest:
 
 ```
-Help me set up an automation task:
+Fetch trending news in AI, startups, and product design.
+Filter out clickbait. Summarize each item in one sentence.
+Generate an HTML brief and send it to my email.
+```
 
-Name: Daily News Digest
+Hourly GitHub PR check:
 
-Trigger: Every day at 8:00 AM
+```
+Check all open PRs in my-org/my-repo.
+List any that need my review or have new comments.
+Post a summary to my Desktop.
+```
 
-Execution flow:
-1. Fetch trending news in these areas:
-   - AI and technology
-   - Startups and business
-   - Product and design
+Weekly project report:
 
-2. Smart filtering:
-   - Exclude entertainment gossip
-   - Exclude clickbait and ads
-   - Keep only in-depth content
-
-3. Summarize each news item with AI (50-word key takeaway)
-
-4. Sort by importance (major industry events first)
-
-5. Generate a well-designed HTML daily brief
-
-6. Send it to my email
-
-Help me quickly stay updated on industry trends during my commute every day!
+```
+Summarize all work done in this Desktop over the past week.
+List completed tasks, open issues, and next steps.
+Generate a report and save it to outputs/.
 ```
 
 <Tip>
-After the setup is completed, Happycapy will automatically execute at 8 AM every day. You only need to open the email on your phone and you can read the important information of the day in 5 minutes!
+  The prompt runs exactly as if you typed it in a conversation. Anything you can do manually in a session, an Automation can do on a schedule.
 </Tip>
-
-## More automation ideas
-
-<AccordionGroup>
-  <Accordion icon="calendar-check" title="Meeting Minutes Processing">
-    **Trigger**: Upload meeting recording or transcript
-
-    **Actions**:
-    - Transcribe audio (if needed)
-    - Extract key discussion points
-    - Identify action items and owners
-    - Create task tracking list
-    - Send summary to attendees
-  </Accordion>
-
-  <Accordion icon="inbox" title="Support Ticket Routing">
-    **Trigger**: New customer inquiry received
-
-    **Actions**:
-    - Analyze inquiry type and urgency
-    - Route to appropriate team member
-    - Extract customer information
-    - Create tracking ticket
-    - Send acknowledgment to customer
-  </Accordion>
-
-  <Accordion icon="chart-line" title="Weekly Performance Dashboard">
-    **Trigger**: Every Friday at 5:00 PM
-
-    **Actions**:
-    - Collect data from multiple sources
-    - Generate charts and visualizations
-    - Calculate key metrics
-    - Create HTML dashboard
-    - Email to stakeholders
-  </Accordion>
-
-  <Accordion icon="image" title="Social Media Content Pipeline">
-    **Trigger**: Upload content brief document
-
-    **Actions**:
-    - Generate copy variations
-    - Create images with AI
-    - Optimize for different platforms
-    - Schedule posts
-    - Generate preview links
-  </Accordion>
-</AccordionGroup>
-
-## Trigger types
-
-Automations support various trigger types:
-
-<CardGroup cols={2}>
-  <Card title="Schedule" icon="calendar">
-    Run at specific times or intervals (daily, weekly, monthly)
-  </Card>
-
-  <Card title="File Events" icon="file">
-    Triggered when files are uploaded or modified
-  </Card>
-
-  <Card title="Email" icon="envelope">
-    Triggered when emails are received (specific sender, subject, etc.)
-  </Card>
-
-  <Card title="Webhooks" icon="webhook">
-    Triggered by external services via HTTP requests
-  </Card>
-
-  <Card title="Manual" icon="hand-pointer">
-    Run on demand with a button click
-  </Card>
-
-  <Card title="Chain" icon="link">
-    Triggered when another automation completes
-  </Card>
-</CardGroup>
-
-## Action types
-
-Actions define what happens when an automation triggers:
-
-<CardGroup cols={3}>
-  <Card title="Data Processing" icon="database">
-    Transform, filter, aggregate data
-  </Card>
-
-  <Card title="File Operations" icon="folder">
-    Create, move, rename, compress files
-  </Card>
-
-  <Card title="Notifications" icon="bell">
-    Send emails, SMS, or push notifications
-  </Card>
-
-  <Card title="AI Processing" icon="brain">
-    Summarize, translate, analyze content
-  </Card>
-
-  <Card title="API Calls" icon="plug">
-    Interact with external services
-  </Card>
-
-  <Card title="Generate Content" icon="wand-magic-sparkles">
-    Create documents, images, videos
-  </Card>
-</CardGroup>
-
-## Best practices
-
-<CardGroup cols={2}>
-  <Card title="Start Simple" icon="seedling">
-    Begin with simple automations and gradually add complexity
-  </Card>
-
-  <Card title="Test Thoroughly" icon="vial">
-    Test automations with sample data before activating
-  </Card>
-
-  <Card title="Monitor Performance" icon="chart-line">
-    Check automation logs regularly to ensure they're working correctly
-  </Card>
-
-  <Card title="Error Handling" icon="triangle-exclamation">
-    Configure fallback actions for when things go wrong
-  </Card>
-
-  <Card title="Document Workflows" icon="book">
-    Keep notes on what each automation does and why
-  </Card>
-
-  <Card title="Review Regularly" icon="rotate">
-    Periodically review and optimize your automations
-  </Card>
-</CardGroup>
-
-## Tips for success
-
-<Tip>
-**Natural language works**: You don't need to know technical details. Just describe what you want to happen in plain language, and Happycapy will configure the automation for you.
-</Tip>
-
-<Tip>
-**Iterate and improve**: Start with a basic automation and refine it over time based on results. You can always edit and enhance existing automations.
-</Tip>
-
-<Warning>
-**Be mindful of frequency**: Automations that run too frequently (e.g., every minute) can consume significant resources. Choose appropriate intervals for scheduled automations.
-</Warning>
-
-## Troubleshooting
-
-<AccordionGroup>
-  <Accordion icon="circle-question" title="Automation didn't trigger">
-    - Check that the automation is activated (toggle switch is on)
-    - Verify the trigger conditions are correct
-    - Review automation logs for errors
-    - Check that required permissions are granted
-  </Accordion>
-
-  <Accordion icon="circle-xmark" title="Action failed to complete">
-    - Check automation logs for error messages
-    - Verify API keys and credentials are valid
-    - Ensure required files or data are available
-    - Test the action manually to isolate the issue
-  </Accordion>
-
-  <Accordion icon="clock-rotate-left" title="Automation runs too slowly">
-    - Simplify complex processing steps
-    - Consider splitting into multiple automations
-    - Reduce the amount of data being processed
-    - Use more efficient file formats
-  </Accordion>
-</AccordionGroup>
-
-## Next steps
-
-<Card
-  title="Create Your First Automation"
-  icon="rocket"
-  href="https://happycapy.ai"
->
-  Start automating repetitive tasks and boost your productivity
-</Card>
