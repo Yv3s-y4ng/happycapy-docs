@@ -1,0 +1,98 @@
+---
+title: "CLI 整合"
+description: "在 Happycapy 雲端環境中安裝和使用 CLI 工具"
+---
+
+## 什麼是 CLI？
+
+CLI（命令列介面）是一種透過文字指令操作軟體的工具。與網頁或 App 不同，CLI 在終端機裡執行，一行指令就能完成操作。
+
+Happycapy 基於雲端沙箱執行，具備**完整的 Linux 終端機能力**。安裝好的 CLI 在整個環境中全域可用，無需擔心本地依賴衝突。你用自然語言說需求，Happycapy 自動調度對應 CLI 完成操作——對話與命令列無縫融為一體。
+
+## 如何開始
+
+找到你想用的 CLI，把以下格式的 prompt 發給 Happycapy：
+
+```
+安裝這個：[倉庫地址]，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+Happycapy 會自動完成安裝，介紹功能，然後引導你互動式完成設定。
+
+## 國內辦公
+
+### 飛書 lark-cli
+
+飛書官方 CLI，封裝了 2500+ 飛書 API 成 200+ 條指令，支援訊息、文件、日曆、多維表格等，專為 AI Agent 設計。
+
+```
+安裝這個：https://github.com/larksuite/cli，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+### 釘釘 dws
+
+釘釘官方 CLI，涵蓋日曆、待辦、訊息、通訊錄、考勤、智慧表格等核心功能。
+
+```
+安裝這個：https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+## 程式碼協作
+
+### GitHub CLI（gh）
+
+將 PR、Issue、程式碼審查等 GitHub 工作流程直接帶入 Happycapy。
+
+```
+安裝這個：https://github.com/cli/cli，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+### GitLab CLI（glab）
+
+將 Issue、Merge Request、CI/CD Pipeline 管理整合到 Happycapy，支援 GitLab.com、自託管實例及多帳戶。內建 GitLab Duo AI 整合，可在終端機直接取得 AI 建議。
+
+```
+安裝這個：https://gitlab.com/gitlab-org/cli，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+## 開發基礎設施
+
+### Vercel CLI
+
+一鍵將前端專案部署到 Vercel，支援從範本初始化專案、與 Git 倉庫深度整合，`git push` 即可觸發自動部署。
+
+```
+安裝這個：https://github.com/vercel/vercel，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+### Supabase CLI
+
+本地執行完整 Supabase 環境，管理資料庫遷移、部署 Edge Functions、從 Schema 自動生成 TypeScript 型別。
+
+```
+安裝這個：https://github.com/supabase/cli，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+### Stripe CLI
+
+在本地安全測試 Webhook，即時查看 API 請求記錄，支援透過命令列直接操作 Stripe 資源（Customer、Payment 等）。
+
+```
+安裝這個：https://github.com/stripe/stripe-cli，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+### AWS CLI
+
+統一管理所有 AWS 服務，支援 JMESPath 查詢過濾結果，內建 Tab 自動補全及 `--waiter` 資源狀態輪詢。
+
+```
+安裝這個：https://github.com/aws/aws-cli，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```
+
+### 阿里雲 CLI
+
+覆蓋 ECS、RDS、容器服務等全線產品，支援 8 種認證方式，可將 JSON 結果格式化為表格輸出。
+
+```
+安裝這個：https://github.com/aliyun/aliyun-cli，全域安裝，並告訴我有哪些功能，然後引導我完成設定
+```

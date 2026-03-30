@@ -49,7 +49,7 @@
           },
           {
             "group": "Features",
-            "pages": ["features/desktops", "features/files", "features/skills", "features/mcp", "features/automations", "features/agents", "features/multi-agent", "features/connect-mac", "features/capy-mail"]
+            "pages": ["features/desktops", "features/files", "features/skills", "features/cli", "features/mcp", "features/automations", "features/agents", "features/multi-agent", "features/connect-mac", "features/capy-mail"]
           },
           {
             "group": "Best Practices",
@@ -75,7 +75,7 @@
           },
           {
             "group": "功能",
-            "pages": ["locales/zh/features/desktops", "locales/zh/features/files", "locales/zh/features/skills", "locales/zh/features/mcp", "locales/zh/features/automations", "locales/zh/features/agents", "locales/zh/features/multi-agent", "locales/zh/features/connect-mac", "locales/zh/features/capy-mail"]
+            "pages": ["locales/zh/features/desktops", "locales/zh/features/files", "locales/zh/features/skills", "locales/zh/features/cli", "locales/zh/features/mcp", "locales/zh/features/automations", "locales/zh/features/agents", "locales/zh/features/multi-agent", "locales/zh/features/connect-mac", "locales/zh/features/capy-mail"]
           },
           {
             "group": "最佳实践",
@@ -101,7 +101,7 @@
           },
           {
             "group": "功能",
-            "pages": ["locales/zh-Hant/features/desktops", "locales/zh-Hant/features/files", "locales/zh-Hant/features/skills", "locales/zh-Hant/features/mcp", "locales/zh-Hant/features/automations", "locales/zh-Hant/features/agents", "locales/zh-Hant/features/multi-agent", "locales/zh-Hant/features/connect-mac", "locales/zh-Hant/features/capy-mail"]
+            "pages": ["locales/zh-Hant/features/desktops", "locales/zh-Hant/features/files", "locales/zh-Hant/features/skills", "locales/zh-Hant/features/cli", "locales/zh-Hant/features/mcp", "locales/zh-Hant/features/automations", "locales/zh-Hant/features/agents", "locales/zh-Hant/features/multi-agent", "locales/zh-Hant/features/connect-mac", "locales/zh-Hant/features/capy-mail"]
           },
           {
             "group": "最佳實踐",
