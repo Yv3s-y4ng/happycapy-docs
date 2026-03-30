@@ -31,6 +31,11 @@
           "icon": "discord",
           "iconType": "brands",
           "href": "https://discord.gg/kSwMyUCdwH"
+        },
+        {
+          "anchor": "Contact Us",
+          "icon": "envelope",
+          "href": "mailto:support@happycapy.ai"
         }
       ]
     },
@@ -40,7 +45,7 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["index", "getting-started/quickstart", "getting-started/credits", "getting-started/faq", "getting-started/contact"]
+            "pages": ["index", "getting-started/quickstart", "getting-started/credits", "getting-started/faq"]
           },
           {
             "group": "Features",
@@ -66,7 +71,7 @@
         "groups": [
           {
             "group": "快速入门",
-            "pages": ["locales/zh/index", "locales/zh/getting-started/quickstart", "locales/zh/getting-started/credits", "locales/zh/getting-started/faq", "locales/zh/getting-started/contact"]
+            "pages": ["locales/zh/index", "locales/zh/getting-started/quickstart", "locales/zh/getting-started/credits", "locales/zh/getting-started/faq"]
           },
           {
             "group": "功能",
@@ -92,7 +97,7 @@
         "groups": [
           {
             "group": "快速入門",
-            "pages": ["locales/zh-Hant/index", "locales/zh-Hant/getting-started/quickstart", "locales/zh-Hant/getting-started/credits", "locales/zh-Hant/getting-started/faq", "locales/zh-Hant/getting-started/contact"]
+            "pages": ["locales/zh-Hant/index", "locales/zh-Hant/getting-started/quickstart", "locales/zh-Hant/getting-started/credits", "locales/zh-Hant/getting-started/faq"]
           },
           {
             "group": "功能",
