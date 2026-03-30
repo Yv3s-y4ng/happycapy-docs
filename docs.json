@@ -40,11 +40,11 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["index", "getting-started/quickstart", "getting-started/credits", "getting-started/faq", "integrations/contact"]
+            "pages": ["index", "getting-started/quickstart", "getting-started/credits", "getting-started/faq", "getting-started/contact"]
           },
           {
             "group": "Features",
-            "pages": ["guides/desktops", "guides/files", "guides/skills", "guides/mcp", "guides/automations", "guides/agents", "guides/multi-agent", "guides/connect-mac", "guides/capy-mail"]
+            "pages": ["features/desktops", "features/files", "features/skills", "features/mcp", "features/automations", "features/agents", "features/multi-agent", "features/connect-mac", "features/capy-mail"]
           },
           {
             "group": "Best Practices",
@@ -66,23 +66,23 @@
         "groups": [
           {
             "group": "快速入门",
-            "pages": ["zh/index", "zh/getting-started/quickstart", "zh/getting-started/credits", "zh/getting-started/faq", "zh/integrations/contact"]
+            "pages": ["locales/zh/index", "locales/zh/getting-started/quickstart", "locales/zh/getting-started/credits", "locales/zh/getting-started/faq", "locales/zh/getting-started/contact"]
           },
           {
             "group": "功能",
-            "pages": ["zh/guides/desktops", "zh/guides/files", "zh/guides/skills", "zh/guides/mcp", "zh/guides/automations", "zh/guides/agents", "zh/guides/multi-agent", "zh/guides/connect-mac", "zh/guides/capy-mail"]
+            "pages": ["locales/zh/features/desktops", "locales/zh/features/files", "locales/zh/features/skills", "locales/zh/features/mcp", "locales/zh/features/automations", "locales/zh/features/agents", "locales/zh/features/multi-agent", "locales/zh/features/connect-mac", "locales/zh/features/capy-mail"]
           },
           {
             "group": "最佳实践",
             "pages": [
-              "zh/best-practices/general",
-              "zh/best-practices/developers",
-              "zh/best-practices/non-technical",
-              "zh/best-practices/product-design",
-              "zh/best-practices/marketing",
-              "zh/best-practices/data-analysis",
-              "zh/best-practices/research",
-              "zh/best-practices/team-collaboration"
+              "locales/zh/best-practices/general",
+              "locales/zh/best-practices/developers",
+              "locales/zh/best-practices/non-technical",
+              "locales/zh/best-practices/product-design",
+              "locales/zh/best-practices/marketing",
+              "locales/zh/best-practices/data-analysis",
+              "locales/zh/best-practices/research",
+              "locales/zh/best-practices/team-collaboration"
             ]
           }
         ]
@@ -92,23 +92,23 @@
         "groups": [
           {
             "group": "快速入門",
-            "pages": ["zh-Hant/index", "zh-Hant/getting-started/quickstart", "zh-Hant/getting-started/credits", "zh-Hant/getting-started/faq", "zh-Hant/integrations/contact"]
+            "pages": ["locales/zh-Hant/index", "locales/zh-Hant/getting-started/quickstart", "locales/zh-Hant/getting-started/credits", "locales/zh-Hant/getting-started/faq", "locales/zh-Hant/getting-started/contact"]
           },
           {
             "group": "功能",
-            "pages": ["zh-Hant/guides/desktops", "zh-Hant/guides/files", "zh-Hant/guides/skills", "zh-Hant/guides/mcp", "zh-Hant/guides/automations", "zh-Hant/guides/agents", "zh-Hant/guides/multi-agent", "zh-Hant/guides/connect-mac", "zh-Hant/guides/capy-mail"]
+            "pages": ["locales/zh-Hant/features/desktops", "locales/zh-Hant/features/files", "locales/zh-Hant/features/skills", "locales/zh-Hant/features/mcp", "locales/zh-Hant/features/automations", "locales/zh-Hant/features/agents", "locales/zh-Hant/features/multi-agent", "locales/zh-Hant/features/connect-mac", "locales/zh-Hant/features/capy-mail"]
           },
           {
             "group": "最佳實踐",
             "pages": [
-              "zh-Hant/best-practices/general",
-              "zh-Hant/best-practices/developers",
-              "zh-Hant/best-practices/non-technical",
-              "zh-Hant/best-practices/product-design",
-              "zh-Hant/best-practices/marketing",
-              "zh-Hant/best-practices/data-analysis",
-              "zh-Hant/best-practices/research",
-              "zh-Hant/best-practices/team-collaboration"
+              "locales/zh-Hant/best-practices/general",
+              "locales/zh-Hant/best-practices/developers",
+              "locales/zh-Hant/best-practices/non-technical",
+              "locales/zh-Hant/best-practices/product-design",
+              "locales/zh-Hant/best-practices/marketing",
+              "locales/zh-Hant/best-practices/data-analysis",
+              "locales/zh-Hant/best-practices/research",
+              "locales/zh-Hant/best-practices/team-collaboration"
             ]
           }
         ]
