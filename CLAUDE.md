@@ -20,7 +20,9 @@ The site runs at `http://localhost:3000` by default.
 
 ## Site configuration
 
-All navigation, theme, colors, and language settings live in `docs.json`. This is the single source of truth for the site structure. When adding new pages, register them in `docs.json` under the appropriate group for each language.
+All navigation, theme, colors, and language settings live in `docs.json`. This is the single source of truth for the site structure. A PostToolUse hook validates that `docs.json` remains valid JSON after every edit — if you break the JSON, the hook will block the change.
+
+When adding a new page to `docs.json`, use forward slashes and omit the `.mdx` extension (e.g., `"features/desktops"`, `"locales/zh/features/desktops"`).
 
 ## Interacting with happycapy.ai via Chrome DevTools
 
@@ -41,21 +43,23 @@ This works via the `chrome-devtools-mcp` plugin's `evaluate_script` tool. After 
 
 ## Content structure
 
-Pages are `.mdx` files using Mintlify components (`<Card>`, `<CardGroup>`, `<Columns>`, `<Accordion>`, `<Note>`, `<Tip>`, etc.).
+Pages are `.mdx` files with YAML frontmatter (`title` and `description` required) using Mintlify components (`<Card>`, `<CardGroup>`, `<Frame>`, `<Columns>`, `<Accordion>`, `<Note>`, `<Tip>`, etc.).
 
 Top-level content directories (English):
-- `getting-started/` — quickstart and FAQ
-- `guides/` — Skills, Multi-agent, MCP, Automations
+- `getting-started/` — quickstart, credits, FAQ
+- `features/` — Desktops, Files, Skills, CLI, MCP, Automations, Agents, Multi-agent, Connect Mac, Capy Mail
 - `best-practices/` — audience-specific best practices (developers, marketing, etc.)
-- `integrations/` — GitHub, Notion, VSCode
-- `use-cases/` — community use cases (QQ bot, Discord bot, etc.)
+- `integrations/` — GitHub, Notion (not currently in docs.json nav)
+- `use-cases/` — community use cases (not currently in docs.json nav)
+
+Images go in `/images/<section>/` (e.g., `/images/features/desktop-sessions.png`) and are referenced with absolute paths from the site root.
 
 ## Localization
 
 The site supports three languages, each mirroring the same directory structure:
-- English: root level (`index.mdx`, `guides/`, etc.)
-- Simplified Chinese: `zh/`
-- Traditional Chinese: `zh-Hant/`
+- English: root level (`index.mdx`, `features/`, `best-practices/`, etc.)
+- Simplified Chinese: `locales/zh/`
+- Traditional Chinese: `locales/zh-Hant/`
 
 English is the source of truth. Chinese translations follow after English is finalized. Navigation entries for each language are defined separately in `docs.json` under `navigation.languages`.
 
@@ -73,6 +77,10 @@ For any non-trivial change — new pages, navigation restructuring, multi-file u
 
 **Evaluate phase**: Before finishing, check output against the writing style rules below. Self-evaluation is unreliable — treat the style rules as an external checklist, not a vibe check.
 
+### Git commits
+
+Do not add `Co-Authored-By: Claude` to commit messages.
+
 ### Multi-file changes
 
 When a change touches multiple files (e.g., a new guide that needs English + zh + zh-Hant versions plus a `docs.json` entry), list all affected files in the plan before touching any of them. Don't start writing until the full scope is clear.
@@ -84,7 +92,7 @@ When a change touches multiple files (e.g., a new guide that needs English + zh 
 - No AI vocabulary: "additionally", "testament", "serves as", "delve", "it's worth noting"
 - No chatbot pleasantries or disclaimer hedging
 - No unnecessary bold, emojis, or formatting flourishes
-- Use standard sentence-case headings
+- Use Title Case for all headings: capitalize every word except articles (a, an, the), coordinating conjunctions (and, but, or, nor), and short prepositions (in, on, at, to, for, of, from, with) — unless first or last word. Verbs like "is", "are", "do" are always capitalized. Hyphenated words: capitalize both parts (e.g., "Real-World").
 - Be direct and specific. If you can say it in one sentence, don't use three.
 - Two-pass revision: humanize first, then audit for anything that still sounds AI-generated
 
