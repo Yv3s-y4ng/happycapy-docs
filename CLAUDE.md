@@ -92,7 +92,7 @@ When a change touches multiple files (e.g., a new guide that needs English + zh 
 - No AI vocabulary: "additionally", "testament", "serves as", "delve", "it's worth noting"
 - No chatbot pleasantries or disclaimer hedging
 - No unnecessary bold, emojis, or formatting flourishes
-- Use Title Case for all headings: capitalize every word except articles (a, an, the), coordinating conjunctions (and, but, or, nor), and short prepositions (in, on, at, to, for, of, from, with) — unless first or last word. Verbs like "is", "are", "do" are always capitalized. Hyphenated words: capitalize both parts (e.g., "Real-World").
+- Use Title Case for all headings: capitalize every word except articles (a, an, the), coordinating conjunctions (and, but, or, nor), short prepositions (in, on, at, to, for, of, from, with), and linking verbs (is, are, be) — unless first or last word. Hyphenated words: capitalize both parts (e.g., "Real-World").
 - Be direct and specific. If you can say it in one sentence, don't use three.
 - Two-pass revision: humanize first, then audit for anything that still sounds AI-generated
 
