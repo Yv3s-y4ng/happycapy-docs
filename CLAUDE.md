@@ -59,6 +59,8 @@ The site supports three languages, each mirroring the same directory structure:
 
 English is the source of truth. Chinese translations follow after English is finalized. Navigation entries for each language are defined separately in `docs.json` under `navigation.languages`.
 
+**Every edit must touch all three languages in the same pass.** Chinese content lives under `locales/zh/` and `locales/zh-Hant/`, mirroring the English root structure. Never commit a change to one language without applying it to the other two.
+
 ## Workflow
 
 ### When to use plan mode
