@@ -7,22 +7,17 @@ description: "Golden rules for effective use of Happycapy that apply to everyone
 
 ### 1. Clearly Describe Your Goals, Not the Process
 
-<Columns cols={2}>
-  <div>
-    **Bad Prompt:**
-    ```
-    First use pandas to read the CSV,
-    then use matplotlib to draw the graph
-    ```
-  </div>
-  <div>
-    **Good Prompt:**
-    ```
-    Analyze this sales data, generate a
-    trend chart, and tell me the key findings
-    ```
-  </div>
-</Columns>
+❌ **Bad Prompt:**
+```
+First use pandas to read the CSV,
+then use matplotlib to draw the graph
+```
+
+✅ **Good Prompt:**
+```
+Analyze this sales data, generate a
+trend chart, and tell me the key findings
+```
 
 <Tip>
   Happycapy automatically selects the best tools and methods. You just need to state the goal.
@@ -30,60 +25,50 @@ description: "Golden rules for effective use of Happycapy that apply to everyone
 
 ### 2. Provide Sufficient Context
 
-<Columns cols={2}>
-  <div>
-    **Bad Prompt:**
-    ```
-    Help me fix this bug
-    ```
-  </div>
-  <div>
-    **Good Prompt:**
-    ```
-    There is no response after the user
-    clicks the login button.
+❌ **Bad Prompt:**
+```
+Help me fix this bug
+```
 
-    Environment: React 18 + TypeScript
-    File: src/components/LoginForm.tsx
-    Browser console shows:
-      'Cannot read property of undefined'
+✅ **Good Prompt:**
+```
+There is no response after the user
+clicks the login button.
 
-    Expected behavior: After clicking,
-    an API request should be sent and
-    jump to the homepage
+Environment: React 18 + TypeScript
+File: src/components/LoginForm.tsx
+Browser console shows:
+  'Cannot read property of undefined'
 
-    Please help me locate the problem
-    and fix it.
-    ```
-  </div>
-</Columns>
+Expected behavior: After clicking,
+an API request should be sent and
+jump to the homepage
+
+Please help me locate the problem
+and fix it.
+```
 
 ### 3. Work Iteratively, Don't Ask for One-Time Perfection
 
-<Columns cols={2}>
-  <div>
-    **Bad Approach:**
-    ```
-    Help me build a complete e-commerce
-    website, including user authentication,
-    product list, shopping cart, payment
-    integration, order management, review
-    system, recommendation algorithm...
-    ```
-  </div>
-  <div>
-    **Good Approach:**
-    ```
-    Help me build the basic framework first:
-    - Home page displays product list
-    - Product details page
-    - Simple shopping cart (no backend required)
+❌ **Bad Approach:**
+```
+Help me build a complete e-commerce
+website, including user authentication,
+product list, shopping cart, payment
+integration, order management, review
+system, recommendation algorithm...
+```
 
-    After completion, we will gradually
-    add functions.
-    ```
-  </div>
-</Columns>
+✅ **Good Approach:**
+```
+Help me build the basic framework first:
+- Home page displays product list
+- Product details page
+- Simple shopping cart (no backend required)
+
+After completion, we will gradually
+add functions.
+```
 
 **Principle:** Break down big tasks → implement step by step → verify each step
 

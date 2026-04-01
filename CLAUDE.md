@@ -18,6 +18,8 @@ mintlify dev
 
 The site runs at `http://localhost:3000` by default.
 
+When you need to inspect the local site (check layout, verify content, debug rendering), use `chrome-devtools-mcp` (CDP) — not Playwright. Navigate to `http://localhost:3000` via `navigate_page`, then use `take_screenshot` or `take_snapshot` to inspect.
+
 ## Site configuration
 
 All navigation, theme, colors, and language settings live in `docs.json`. This is the single source of truth for the site structure. A PostToolUse hook validates that `docs.json` remains valid JSON after every edit — if you break the JSON, the hook will block the change.
